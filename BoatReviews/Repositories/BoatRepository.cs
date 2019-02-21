@@ -12,7 +12,7 @@ namespace BoatReviews.Repositories
         {
             {1, new Boat() { Id = 1, Name = "Motorboat"}},
             {2, new Boat() { Id = 2, Name = "Sailboat" } },
-            {3, new Boat() { Id = 3, Name = "Man-Powered Boat" } }
+            {3, new Boat() { Id = 3, Name = "People-Powered Boat" } }
         };
 
         public IEnumerable<Boat> GetAll()

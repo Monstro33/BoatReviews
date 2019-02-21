@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BoatReviews.Models.Boat>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Boat List</h1>
+    <p>
+        Here's all your boats.
+    </p>
+    <ol>
+        @foreach (var boat in Model)
+        {
+            <li><a href="/Boat/Details/@boat.Id">@boat.Name</a></li>
+        }
+    </ol>
+</body>
+</html>
