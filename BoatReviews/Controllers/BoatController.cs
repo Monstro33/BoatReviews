@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BoatReviews.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,23 @@ namespace BoatReviews.Controllers
 {
     public class BoatController : Controller
     {
+        BoatRepository boatRepo;
+
+        public BoatController()
+        {
+            boatRepo = new BoatRepository();
+        }
+
         public ViewResult Index()
         {
-            return View();
+            var model = boatRepo.GetAll();
+            return View(model);
+        }
+
+        public ViewResult Details(int id)
+        {
+            var model = boatRepo.GetById(id);
+            return View(model);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace BoatReviews.Tests
         {
             underTest = new BoatController();
         }
-    
+
         [Fact]
         public void Index_Returns_A_View_Result()
         {
@@ -28,7 +28,15 @@ namespace BoatReviews.Tests
         {
             var result = underTest.Index();
             var model = (IEnumerable<Boat>)result.Model;
-            Assert.Equal(2, model.Count());
+            Assert.Equal(3, model.Count());
+        }
+        [Fact]
+        public void Details_Model_Has_Correct_ID()
+        {
+            var expectedId = 2;
+            var result = underTest.Details(expectedId);
+            var model = (Boat)result.Model;
+            Assert.Equal(expectedId, model.Id);
         }
     }
 }
