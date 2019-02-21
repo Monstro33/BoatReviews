@@ -13,7 +13,7 @@ namespace BoatReviews.Tests
         public BoatController underTest;
         public BoatControllerTests()
         {
-            var underTest = new BoatController();
+            underTest = new BoatController();
         }
     
         [Fact]
