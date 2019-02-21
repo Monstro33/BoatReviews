@@ -1,4 +1,5 @@
 using BoatReviews.Controllers;
+using BoatReviews.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,13 @@ namespace BoatReviews.Tests
         {
             var result = underTest.Index();
             Assert.IsType<ViewResult>(result);
+        }
+        [Fact]
+        public void Index_Model_Has_3_Boats()
+        {
+            var result = underTest.Index();
+            var model = (IEnumerable<Boat>)result.Model;
+            Assert.Equal(2, model.Count());
         }
     }
 }
