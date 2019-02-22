@@ -10,9 +10,9 @@ namespace BoatReviews.Repositories
     {
         public Dictionary<int, Boat> SomeBoats = new Dictionary<int, Boat>()
         {
-            {1, new Boat() { Id = 1, Name = "Motorboat"}},
-            {2, new Boat() { Id = 2, Name = "Sailboat" } },
-            {3, new Boat() { Id = 3, Name = "Human Powered Boat" } }
+            {1, new Boat() { Id = 1, Name = "Motorboat", ImageLocation = "Img/Motorboat1.jpeg" } },
+            {2, new Boat() { Id = 2, Name = "Sailboat", ImageLocation = "Img/Sailboat1.jpeg" } },
+            {3, new Boat() { Id = 3, Name = "Human Powered Boat", ImageLocation = "Img/HPB1.jpg" } }
         };
 
         public IEnumerable<Boat> GetAll()

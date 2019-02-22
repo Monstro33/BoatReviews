@@ -12,23 +12,28 @@
     <link href="~/Main.css" rel="stylesheet" />
 </head>
 <body>
+    <nav class="navbar">
+    </nav>
+
     <div class="background">
-    </div>
+
+
         <div class="header">
             <h1>Boat Reviews</h1>
         </div>
-    <div class="navbar">
-     </div>
-    <div class="main">
-                <h2>
-                    Which type of boat would you like to review?
-                </h2>
-         <ol>
-        @foreach (var boat in Model)
-        {
-            <li><a href="/Boat/Details/@boat.Id">@boat.Name</a></li>
-        }
-        </ol>
+
+        <div class="main">
+            <h2>
+                Which type of boat would you like to review?
+
+            </h2>
+            <ol>
+                @foreach (var boat in Model)
+                {
+                    <li><img src="@boat.ImageLocation" /><a href="/Boat/Details/@boat.Id">@boat.Name</a></li>
+                }
+            </ol>
+        </div>
     </div>
 </body>
 </html>
