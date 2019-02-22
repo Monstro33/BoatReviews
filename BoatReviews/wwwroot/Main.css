@@ -1,0 +1,57 @@
+﻿.wrapper {
+    font-family: 'Oleo Script', cursive;
+}
+
+.bg-img {
+    background-image: url(Img/Water1.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.subheader{
+    text-align: center;
+}
+
+.header{
+    text-align: center;
+    font-weight: bold;
+}
+
+/*.nav{
+
+}*/
+
+.main {
+    text-align: left;
+    font-weight: bold;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 50%;
+    border-radius: 10px;
+    display: block;
+    opacity: 1;
+    border: 2px solid #808080;
+}
+
+.boatLinks {
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 1;
+    height: 100%;
+}
+
+.nobull{
+    list-style-type: none;
+}
