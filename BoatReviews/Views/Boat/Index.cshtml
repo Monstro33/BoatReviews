@@ -30,7 +30,9 @@
             <ol>
                 @foreach (var boat in Model)
                 {
-                    <li><img src="@boat.ImageLocation" /><a href="/Boat/Details/@boat.Id">@boat.Name</a></li>
+                    <li><img src="@boat.ImageLocation" />
+                       <a href="/Boat/Details/@boat.Id">@boat.Name</a><br>
+                </li>
                 }
             </ol>
         </div>

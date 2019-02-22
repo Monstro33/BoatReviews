@@ -3,10 +3,22 @@
 }
 
 .main{
+    text-align: center;
     
 }
 
-.main image{
-    height: 25%;
-    width: 25%;
+img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 50%;
+    border-radius: 10px;
+    display: block;
+}
+
+.centered {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
