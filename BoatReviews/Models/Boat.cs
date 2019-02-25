@@ -40,10 +40,6 @@ namespace BoatReviews.Models
                     break;
             }
         }
-
-        public Boat()
-        {
-        }
     }
 
 }
