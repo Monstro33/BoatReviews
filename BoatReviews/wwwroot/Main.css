@@ -42,7 +42,7 @@
 
 .sub_header {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .navbar ul {
@@ -76,7 +76,7 @@
 }
 
 .navbar ul li a:hover {
-    background: #fff;
+    background: #000000;
     color: #000;
     transform: rotateX(90deg) translateY(-22px);
         }
@@ -89,10 +89,10 @@
      padding: 2px 0px;
      text-align: center;
      line-height: 50px;
-     background: none repeat scroll 0% 0% #FF005B;
+     background: none repeat scroll 0% 0% #000000;
      color: greenyellow;
      content: attr(data-hover);
-     transition: #6363CE 0.3s ease 0s;
+     transition: #000000 0.3s ease 0s;
      transform: rotateX(-90deg);
      transform-origin: 50% 0px 0px;
         }
@@ -106,22 +106,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-content: flex-end;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .card {
     padding: 10px;
-    border-radius: 10px;
-    font-size: 40px;
+    border-radius: 2px;
+    font-size: 20px;
     font-family: 'Oleo Script', cursive;
+    border: solid;
+    border-color: white;
+    width: 30%;
 }
 
 .card img {
     margin-left: auto;
     margin-right: auto;
-    height: 75%;
-    width: 75%;
+    height: 100%;
+    width: 100%;
     /*border-radius: 10px;*/
 }
 
