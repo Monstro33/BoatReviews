@@ -32,18 +32,28 @@
             </h2>
         </div>
         <div class="main">
-            <div class="card" id="boat_1">
-                <img src="~/Img/Sea Ray.jpg" />
-                <h2>Sea Ray</h2>
+            @*<div class="card" id="boat_1">
+                <img src="~/Img/NitroBig.jpg" />
+                <h2>Nitro</h2>
             </div>
             <div class="card" id="boat_2">
-                <img src="~/Img/Viking.jpg" />
-                <h2>Viking</h2>
+                <img src="~/Img/SeaRayBig.jpg" />
+                <h2>Sea Ray</h2>
             </div>
             <div class="card" id="boat_3">
-                <img src="~/Img/Yamaha.jpg" />
-                <a href="Yamaha"</a>
+                <img src="~/Img/WellcraftBig.jpg" />
+                <a href="Wellcraft" </a>
+            </div>*@
+            @foreach (var boat in Model)
+            {
+            <div class="card">
+                <img src="@boat.ImageLocation" />
+                <a href="/Boat/Details/@boat.Id">@boat.Name</a>
+                
             </div>
+            }
+
+
         </div>
         <div class="footer">
         </div>

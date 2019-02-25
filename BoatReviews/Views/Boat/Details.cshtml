@@ -6,14 +6,28 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+<head>    
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link href="~/Main.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
 </head>
+<div class="navbar">
+    <ul>
+        <li><a class="current" href="#" data-hover="Home">Home</a></li>
+        <li><a href="#" data-hover="About">About</a></li>
+        <li><a href="#" data-hover="All Boats">All Boats</a></li>
+        <li><a href="#" data-hover="Contact">Contact</a></li>
+    </ul>
+</div>
 <body>
-    <h1>@Model.Name's Details</h1>
-    <p>stuff goes here</p>
-    <a href="/Boat">Back to list</a>
+    <div class="card">
+        <img src="~/@Model.ImageLocation" />
+    </div>
+    <div class="details">
+        <h1>@Model.Name</h1>
+        <p>@Model.Reviews[0]</p>
+        <a href="/Boat">Back to list</a>
+    </div>
 </body>
 </html>
