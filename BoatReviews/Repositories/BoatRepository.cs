@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace BoatReviews.Repositories
 {
+
+
     public class BoatRepository
     {
+
         public Dictionary<int, Boat> SomeBoats = new Dictionary<int, Boat>()
         {
-            {1, new Boat() { Id = 1, Name = "Motorboat", ImageLocation = "Img/Motorboat1.jpeg" } },
-            {2, new Boat() { Id = 2, Name = "Sailboat", ImageLocation = "Img/Sailboat1.jpeg" } },
-            {3, new Boat() { Id = 3, Name = "Human Powered Boat", ImageLocation = "Img/HPB1.jpg" } }
+            {1, new Boat(1, "Nitro", "Img/NitroBig.jpg") },
+            {2, new Boat(2, "Sea Ray", "Img/SeaRayBig.jpg") },
+            {3, new Boat(3, "Wellcraft", "Img/WellcraftBig.jpg") }
         };
 
         public IEnumerable<Boat> GetAll()
@@ -26,3 +29,7 @@ namespace BoatReviews.Repositories
         }
     }
 }
+
+//{1, new Boat() { Id = 1, Name = "Nitro", ImageLocation = "Img/NitroBig.jpg" } },
+//            {2, new Boat() { Id = 2, Name = "Sea Ray", ImageLocation = "Img/SeaRayBig.jpg" } },
+//            {3, new Boat() { Id = 3, Name = "Wellcraft", ImageLocation = "Img/WellcraftBig.jpg" } }
