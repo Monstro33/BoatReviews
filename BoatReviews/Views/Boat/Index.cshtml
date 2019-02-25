@@ -14,30 +14,44 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="bg-img"></div>
-        <nav class="navbar">
-        </nav>
+        <div class="background"></div>
+        <div class="navbar">
+            <ul>
+                <li><a class="current" href="#" data-hover="Home">Home</a></li>
+                <li><a href="#" data-hover="About">About</a></li>
+                <li><a href="#" data-hover="All Boats">All Boats</a></li>
+                <li><a href="#" data-hover="Contact">Contact</a></li>
+            </ul>
+        </div>
         <div class="header">
             <h1>Boat Reviews</h1>
         </div>
-        <div class="subheader">
+        <div class="sub_header">
             <h2>
                 Which type of boat would you like to review?
             </h2>
         </div>
-        <div>     
-            <ul class="nobull">
-                @foreach (var boat in Model)
-                {
-                    <li>
-                        <img src="@boat.ImageLocation" />
-                        <div class="boatLinks">
-                            <a href="/Boat/Details/@boat.Id">@boat.Name</a>
-                        </div>
-                    </li>
-                }
-            </ul>
+        <div class="main">
+            <div class="card" id="boat_1">
+                <img src="~/Img/Chaparral.jpg" />
+                <h2>Chaparral</h2>
+            </div>
+            <div class="card" id="boat_2">
+                <img src="~/Img/Sea Ray.jpg" />
+                <h2>Sea Ray</h2>
+            </div>
+            <div class="card" id="boat_3">
+                <img src="~/Img/Viking.jpg" />
+                <h2>Viking</h2>
+            </div>
+            <div class="card" id="boat_4">
+                <img src="~/Img/Yamaha.jpg" />
+                <h2>Yamaha</h2>
+            </div>
+        </div>
+        <div class="footer">
         </div>
     </div>
 </body>
 </html>
+

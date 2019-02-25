@@ -1,9 +1,11 @@
 ﻿.wrapper {
     font-family: 'Oleo Script', cursive;
+    display: flex;
+    flex-direction: column;
 }
 
-.bg-img {
-    background-image: url(Img/Water1.jpg);
+.background {
+    background-image: url(Img/WallPaper.jpg);
     position: fixed;
     top: 0;
     left: 0;
@@ -16,36 +18,122 @@
     opacity: 0.5;
 }
 
-.subheader{
-    text-align: center;
+.navbar {
+    display: flex;
+    justify-content: center;
+    color: black;
+    top: o;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform .4s;
+    transform: perspective(800px) scale(1) translateX(0) rotateY(0);
+    transform-style: preserve-3d;
+    align-items: center;
+    height: 15px;
+    margin-top: 10px;
 }
 
-.header{
+.header {
     text-align: center;
     font-weight: bold;
+    margin-top: 10px;
 }
+
+.sub_header {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navbar ul {
+    font-size: larger;
+    color: green;
+    list-style: none;
+    justify-content: center;
+    }
+
+.navbar ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    padding: 1rem;
+    color: darkblue;
+    text-decoration: none;
+    transition: transform 0.3s ease 0s;
+    transform-origin: 50% 0px 0px;
+    transform-style: preserve-3d;
+    }
+
+.navbar ul li a.current {
+    color: darkblue;
+
+}
+
+.navbar ul li a:hover {
+    background: #fff;
+    color: #000;
+    transform: rotateX(90deg) translateY(-22px);
+        }
+
+.navbar ul li a::before {
+     position: absolute;
+     top: 100%;
+     left: 0px;
+     width: 100%;
+     padding: 2px 0px;
+     text-align: center;
+     line-height: 50px;
+     background: none repeat scroll 0% 0% #FF005B;
+     color: greenyellow;
+     content: attr(data-hover);
+     transition: #6363CE 0.3s ease 0s;
+     transform: rotateX(-90deg);
+     transform-origin: 50% 0px 0px;
+        }
+    
 
 /*.nav{
 
 }*/
 
 .main {
-    text-align: left;
-    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-end;
+    margin-top: 20px;
 }
 
-img{
+.card {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: 'Oleo Script', cursive;
+}
+
+.card img {
     margin-left: auto;
     margin-right: auto;
-    height: 50%;
-    width: 50%;
-    border-radius: 10px;
-    display: block;
-    opacity: 1;
-    border: 2px solid #808080;
+    height: 75%;
+    width: 75%;
+    /*border-radius: 10px;*/
 }
 
-.boatLinks {
+a:link{
+
+}
+
+.card:hover img {
+    
+}
+
+/*.boatLinks {
     font-size: 15px;
     font-weight: bold;
     z-index: 1;
@@ -54,4 +142,4 @@ img{
 
 .nobull{
     list-style-type: none;
-}
+}*/
