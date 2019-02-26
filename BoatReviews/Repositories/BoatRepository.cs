@@ -10,7 +10,12 @@ namespace BoatReviews.Repositories
 
     public class BoatRepository
     {
-
+        private BoatContext db;
+        
+        public BoatRepository(BoatContext db)
+        {
+            this.db = db;
+        }
         public Dictionary<int, Boat> SomeBoats = new Dictionary<int, Boat>()
         {
             {1, new Boat(1, "Nitro", "Img/NitroBig.jpg") },
@@ -20,12 +25,14 @@ namespace BoatReviews.Repositories
 
         public IEnumerable<Boat> GetAll()
         {
-            return SomeBoats.Values.ToList();
+            return db.Boats.ToList();
+            //return SomeBoats.Values.ToList();
         }
 
         public object GetById(int id)
         {
-            return SomeBoats[id];
+            return db.Boats.Single(boat => boat.Id == id);
+            //return SomeBoats[id];
         }
     }
 }
