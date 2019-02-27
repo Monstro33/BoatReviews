@@ -10,7 +10,7 @@ namespace BoatReviews.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string ImageLocation { get; set; }
-        //public List<string> Reviews { get; set; }
+        //public List<string> Reviews { get; set; }xxx
         //public List<string> Images { get; set; }
         public string ReviewContent { get; set; }
         //public string Images { get; set; }
