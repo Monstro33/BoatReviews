@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace BoatReviews.Repositories
 {
 
-
     public class BoatRepository
     {
         private BoatContext db;

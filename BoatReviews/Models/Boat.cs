@@ -10,9 +10,10 @@ namespace BoatReviews.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string ImageLocation { get; set; }
-        public List<string> Reviews { get; set; }
-        public List<string> Images { get; set; }
-
+        //public List<string> Reviews { get; set; }
+        //public List<string> Images { get; set; }
+        public string ReviewContent { get; set; }
+        public string Images { get; set; }
         private Details details = new Details();
 
 
@@ -25,18 +26,18 @@ namespace BoatReviews.Models
             switch (Id)
             {
                 case 1:
-                    Reviews = details.GetNitroReviews();
-                    Images = details.GetNitroImages();
+                    ReviewContent = details.GetNitroReviews();
+                    ImageLocation = details.GetNitroImages();
                     break;
 
                 case 2:
-                    Reviews = details.GetSeaRayReviews();
-                    Images = details.GetSeaRayImages();
+                    ReviewContent = details.GetSeaRayReviews();
+                    ImageLocation = details.GetSeaRayImages();
                     break;
 
                 case 3:
-                    Reviews = details.GetWellcraftReviews();
-                    Images = details.GetWellcraftImages();
+                    ReviewContent = details.GetWellcraftReviews();
+                    ImageLocation = details.GetWellcraftImages();
                     break;
             }
         }

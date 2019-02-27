@@ -11,9 +11,9 @@ namespace BoatReviews.Controllers
     {
         BoatRepository boatRepo;
 
-        public BoatController()
+        public BoatController(BoatRepository boatRepo)
         {
-            boatRepo = new BoatRepository();
+            this.boatRepo = boatRepo;
         }
 
         public ViewResult Index()
