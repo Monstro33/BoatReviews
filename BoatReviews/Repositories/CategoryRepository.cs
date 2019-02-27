@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace BoatReviews.Repositories
 {
-    public class ReviewRepository
+    public class CategoryRepository
     {
-        test for changes
     }
 }
