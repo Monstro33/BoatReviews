@@ -11,51 +11,60 @@
     <title>Index</title>
     <link href="~/Main.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <div class="background"></div>
-        <div class="navbar">
-            <ul>
-                <li><a class="current" href="#" data-hover="Home">Home</a></li>
-                <li><a href="#" data-hover="About">About</a></li>
-                <li><a href="~/boat" data-hover="All Boats">All Boats</a></li>
-                <li><a href="#" data-hover="Contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="header">
-            <h1>Motorboat Reviews</h1>
-        </div>
-        <div class="sub_header">
-            <h2>
-                Which boat would you like to review?
-            </h2>
-        </div>
+        <header>
+            <nav>
+                <div class="nav-icon">
+                    <i class=" fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">Boat Reviews</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">All Boats</a></li>
+                        <li><a href="#">Boat Categories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <div class="main">
-            @*<div class="card" id="boat_1">
-                <img src="~/Img/NitroBig.jpg" />
-                <h2>Nitro</h2>
+            <div class=" = row">
+                <p>test</p>
             </div>
-            <div class="card" id="boat_2">
-                <img src="~/Img/SeaRayBig.jpg" />
-                <h2>Sea Ray</h2>
+            <div class=" = row">
+                <p>test</p>
             </div>
-            <div class="card" id="boat_3">
-                <img src="~/Img/WellcraftBig.jpg" />
-                <a href="Wellcraft" </a>
-            </div>*@
-            @foreach (var boat in Model)
-            {
-            <div class="card">
-                <img src="@boat.ImageLocation" />
-                <a href="/Boat/Details/@boat.Id">@boat.Name</a>
-                
+            <div class=" = row">
+                <p>test</p>
             </div>
-            }
+            <script type="text/javascript">
 
+                //Menu toggle-effect
+                $(document).ready(function () {
+                    $(".menu-icon").on("click", function () {
+                        $("nav ul").toggleClass("showing");
+                    });
+                });
 
-        </div>
-        <div class="footer">
+                //Scrolling Effect
+                $(window).on('scroll', function () {
+                    if ($(window).scrollTop()) {
+                        $('nav').addClass('black');
+                    }
+                    else {
+                        $('nav').removeClass('black')
+                    }
+                })
+            </script>
         </div>
     </div>
 </body>
