@@ -5,7 +5,7 @@
 }
 
 .background {
-    background-image: url(Img/BlueFence.jpg);
+    background-image: url(Img/HdFence.jpg);
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 1;
+    opacity: .5;
 }
 
 .navbar {
@@ -30,8 +30,10 @@
     transform: perspective(800px) scale(1) translateX(0) rotateY(0);
     transform-style: preserve-3d;
     align-items: center;
-    height: 15%;
-    background-color: white;
+    height: 5%;
+    background-color: seashell;
+    margin-top: -2.5em;
+    position: fixed;
 }
 
 .header {

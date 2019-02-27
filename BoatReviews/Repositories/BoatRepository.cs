@@ -9,18 +9,18 @@ namespace BoatReviews.Repositories
 
     public class BoatRepository
     {
-        private BoatContext db;
+        BoatContext db;
         
         public BoatRepository(BoatContext db)
         {
             this.db = db;
         }
-        public Dictionary<int, Boat> SomeBoats = new Dictionary<int, Boat>()
-        {
-            {1, new Boat(1, "Nitro", "Img/NitroBig.jpg") },
-            {2, new Boat(2, "Sea Ray", "Img/SeaRayBig.jpg") },
-            {3, new Boat(3, "Wellcraft", "Img/WellcraftBig.jpg") }
-        };
+        //public Dictionary<int, Boat> SomeBoats = new Dictionary<int, Boat>()
+        //{
+        //    {1, new Boat(1, "Nitro", "Img/NitroBig.jpg") },
+        //    {2, new Boat(2, "Sea Ray", "Img/SeaRayBig.jpg") },
+        //    {3, new Boat(3, "Wellcraft", "Img/WellcraftBig.jpg") }
+        //};
 
         public IEnumerable<Boat> GetAll()
         {
