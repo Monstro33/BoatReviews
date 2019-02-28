@@ -10,7 +10,7 @@ namespace BoatReviews.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string ImageLocation { get; set; }
-        //public List<string> Reviews { get; set; }xxx
+        //public List<string> Reviews { get; set; }
         //public List<string> Images { get; set; }
         public string ReviewContent { get; set; }
         //public string Images { get; set; }
@@ -22,29 +22,6 @@ namespace BoatReviews.Models
 
         }
 
-        //public Boat(int id, string name, string imageLocation)
-        //{
-        //    Name = name;
-        //    Id = id;
-        //    ImageLocation = imageLocation;
-
-        //    switch (Id)
-        //    {
-        //        case 1:
-        //            ReviewContent = details.GetNitroReviews();
-        //            ImageLocation = details.GetNitroImages();
-        //            break;
-
-        //        case 2:
-        //            ReviewContent = details.GetSeaRayReviews();
-        //            ImageLocation = details.GetSeaRayImages();
-        //            break;
-
-        //        case 3:
-        //            ReviewContent = details.GetWellcraftReviews();
-        //            ImageLocation = details.GetWellcraftImages();
-        //            break;
-        //    }
         }
     }
 

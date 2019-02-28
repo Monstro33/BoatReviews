@@ -35,7 +35,3 @@ namespace BoatReviews.Repositories
         }
     }
 }
-
-//{1, new Boat() { Id = 1, Name = "Nitro", ImageLocation = "Img/NitroBig.jpg" } },
-//            {2, new Boat() { Id = 2, Name = "Sea Ray", ImageLocation = "Img/SeaRayBig.jpg" } },
-//            {3, new Boat() { Id = 3, Name = "Wellcraft", ImageLocation = "Img/WellcraftBig.jpg" } }

@@ -20,6 +20,9 @@ namespace BoatReviews
 
             services.AddDbContext<BoatContext>();
             services.AddScoped<BoatRepository, BoatRepository>();
+
+            services.AddDbContext<CategoryContext>();
+            services.AddScoped<CategoryRepository, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
