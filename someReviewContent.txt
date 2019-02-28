@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +16,7 @@ namespace BoatReviews.Models
 
         public string GetNitroReviews()
         {
-            return ("There are lots of bass boats around, and we doubt that one catches fish better than the others ‚Äì despite boat builders' claims. The fact is that the Nitro Z-6 has all of the fishing amenities and equipment needed to put tournament anglers on top of the bass without draining the last drop from their bank accounts. The Nitro Z-6 costs about $21 grand, including a trailer and Mercury 115-hp OptiMax outboard. The Nitro Z - 6 is a good choice for beginning boat owners, club tournament anglers or anybody wanting to chase fish on a budget.And in case you are wondering, it is one of the best - selling brands on the market.");
+            return ("There are lots of bass boats around, and we doubt that one catches fish better than the others ñ despite boat builders' claims. The fact is that the Nitro Z-6 has all of the fishing amenities and equipment needed to put tournament anglers on top of the bass without draining the last drop from their bank accounts. The Nitro Z-6 costs about $21 grand, including a trailer and Mercury 115-hp OptiMax outboard. The Nitro Z - 6 is a good choice for beginning boat owners, club tournament anglers or anybody wanting to chase fish on a budget.And in case you are wondering, it is one of the best - selling brands on the market.");
             //NitroReviews.Add("Bought boat on sat morning. Brought home. Plugged in battery, caught fire. This could have burned our place down because of battery so close to gas tank. Brought back to dealer. Next week had to bring back to dealer for same thing. Very disappointed. Can't use yet and haven't even paid a payment yet. Wouldn't advise using that dealer. Nitro needs to build better boats! We just want our boat back fixed and don't want to have to worry about it doing this again.");
             //NitroReviews.Add("My Nitro is coming apart from the inside.The stringers have cracked and detached from the hull.Nitro says they will do nothing and my insurance won't cover cause a surveyor reported it was due to poor layup process during manufacturing. Sandy from corporate said, 'We will do nothing.'");
 
@@ -33,7 +33,7 @@ namespace BoatReviews.Models
 
         public string GetSeaRayReviews()
         {
-            return ("Sea Ray has moved to fill a gap between its affordable ‚Äúsport‚Äù lineup and the luxury SLX models and created a somewhat cost-conscious line that still embraces an upscale look. The result is the SPX Series. Affordable, but depending on how she gets optioned out, still embraces many of the amenities that the brand is well known for. Perhaps most importantly, the hulls are the same as her more expensive siblings, and for that reason we expect the ride and the handling to be on a par with them.");
+            return ("Sea Ray has moved to fill a gap between its affordable ìsportî lineup and the luxury SLX models and created a somewhat cost-conscious line that still embraces an upscale look. The result is the SPX Series. Affordable, but depending on how she gets optioned out, still embraces many of the amenities that the brand is well known for. Perhaps most importantly, the hulls are the same as her more expensive siblings, and for that reason we expect the ride and the handling to be on a par with them.");
             //SeaRayReviews.Add("Sea Ray makes a good production boat and is a good brand IMO. They are not the best built boats, but will be a great boat for family use on inland lakes. Even well built boats are susceptible to abuse and neglect.");
             //SeaRayReviews.Add("I own a Sea Ray SLX with an I/O engine (only 160 hrs) and absolutely love the boat. Since I've taken up fishing, I've moved on to a larger boat which is more conducive to fishing. Loved the Sea Ray when skiing or cruising and mileage was excellent! As in all boats, maintenance is the key and I babied the boat & engine & have never had a problem with it. Great quality boat.");
 

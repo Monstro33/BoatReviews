@@ -18,13 +18,11 @@ namespace BoatReviews.Repositories
         public IEnumerable<Category> GetAll()
         {
             return db.Categories.ToList();
-            //return SomeBoats.Values.ToList();
         }
 
         public object GetById(int id)
         {
             return db.Categories.Single(category => category.Id == id);
-            //return SomeBoats[id];
         }
     }
 }
