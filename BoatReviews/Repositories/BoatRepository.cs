@@ -10,7 +10,7 @@ namespace BoatReviews.Repositories
 
     public class BoatRepository
     {
-        BoatContext db;
+        public BoatContext db;
         
         public BoatRepository(BoatContext db)
         {
