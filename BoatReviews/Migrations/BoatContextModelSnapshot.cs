@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BoatReviews.Migrations
 {
-    [DbContext(typeof(BoatContext))]
+    [DbContext(typeof(BaseContext<>))]
     partial class BoatContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

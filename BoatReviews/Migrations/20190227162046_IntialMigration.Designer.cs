@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BoatReviews.Migrations
 {
-    [DbContext(typeof(BoatContext))]
+    [DbContext(typeof(BaseContext<>))]
     [Migration("20190227162046_IntialMigration")]
     partial class IntialMigration
     {
