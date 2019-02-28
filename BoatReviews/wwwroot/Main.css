@@ -4,28 +4,35 @@
     width: 100%;
     min-width: 25%;
     font-family: Poppins;
+    color: sandybrown;
+    text-align: center;
 }
 
 header {
     width: 100%;
-    height: 100vh;
+    height: 50vh;
+}
+
+.header-1 {
+    background-color: rgba(158, 246, 211, 0.2);
+    padding: 2px;
+}
+
+.wrapper-1 {
     background: url(Img/WallPaper.jpg) no-repeat 50% 50%;
     background-size: cover;
 }
 
-.main {
-    width: 90%;
-    margin: 4em auto;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: justify;
+.wrapper-2 {
+    background: url(Img/HdFence.jpg) no-repeat 50% 50%;
+    background-size: cover;
 }
 
 .logo {
     position: fixed;
     float: left;
     margin: 16px 36px;
-    color: #fff;
+    color: navy;
     font-weight: bold;
     font-size: 24px;
 }
@@ -39,7 +46,7 @@ nav {
         list-style: none;
         background: rgba(0,0,0,0);
         overflow: hidden;
-        color: #fff;
+        color: rgba(34, 66, 32, 0.41);
         padding: 0;
         text-align: center;
         margin: 0;
@@ -47,7 +54,7 @@ nav {
     }
 
     nav.black ul {
-        background: #000;
+        background: #808080;
     }
 
     nav ul li {
@@ -61,7 +68,7 @@ nav {
             font-size: 20px;
         }
 
-.menu-icon {
+/*.menu-icon {
     width: 100%;
     background: #000;
     text-align: right;
@@ -69,7 +76,7 @@ nav {
     padding: 15px 40px;
     color: #fff;
     display: none;
-}
+}*/
 
 @media(max-width:580px) {
     .logo {
@@ -80,11 +87,11 @@ nav {
 
     nav ul {
         max-height: 0px;
-        background: #000;
+        background: rgba(19, 9, 251, 0.71);
     }
 
     nav.black ul {
-        background: #2b2465;
+        color: deepskyblue;
     }
 
     .showing {
@@ -98,25 +105,105 @@ nav {
         text-align: center;
     }
 
-    .menu-icon {
+    /*.menu-icon {
         display: block;
+    }*/
+
+
+.category-details {
+        background-color: rgba(158, 246, 211, 0.2);
+        position: fixed;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 65%;
+        height: 20vh;
+}
+
+.boat-preview {
+    margin-top: 10px;
+    height: 30vh;
+    width: 75%
+}
+
+.main-photos {
+    height: 50vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 20px;
+        /*margin-bottom: 30px;*/
+        align-content: flex-end;
+        width: 100%;
+        /*position: fixed;
+        bottom: 0;*/
+        background-color: white;
     }
-}
 
-
-
-
-
-
-
-
-/*.wrapper {
-    font-family: 'Oleo Script', cursive;
+.photo-card {
     display: flex;
-    flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+        align-content: flex-end;
+        margin: 10px auto;
+        display: block; 
+        -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        -o-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        position: relative;
+        bottom: 0;
+        width: 10%;
+        object-fit: contain;
+        height: 25vh;
+    }
+
+    .photo-card img {
+        border: 5px solid rgba(255, 255, 255, .1);
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: contain;
+        max-height: 5rem;
+    }
+
+        .photo-card:before {
+            content: "";
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
+            background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+            background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+        }
+
+.details-photo {
+        margin: 30px auto;
+        display: block;
+        -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        -o-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+        position: relative;
 }
 
-.background {
+    .details-photo:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+        background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+    }
+
+
+    /*.background {
     background-image: url(Img/HdFence.jpg);
     position: fixed;
     top: 0;
@@ -128,129 +215,24 @@ nav {
     background-repeat: no-repeat;
     z-index: -1;
     opacity: .5;
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    color: black;
-    top: o;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: transform .4s;
-    transform: perspective(800px) scale(1) translateX(0) rotateY(0);
-    transform-style: preserve-3d;
-    align-items: center;
-    height: 5%;
-    background-color: seashell;
-    margin-top: -2.5em;
-    position: fixed;
-}
-
-.header {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.sub_header {
-    text-align: center;
-    margin-top: 5px;
-}
-
-.navbar ul {
-    font-size: larger;
-    color: green;
-    list-style: none;
-    justify-content: center;
-    }
-
-.navbar ul li {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    letter-spacing: 0.05rem;
-    cursor: pointer;
-}
-
-.navbar ul li a {
-    display: inline-block;
-    padding: 1rem;
-    color: darkblue;
-    text-decoration: none;
-    transition: transform 0.3s ease 0s;
-    transform-origin: 50% 0px 0px;
-    transform-style: preserve-3d;
-    }
-
-.navbar ul li a.current {
-    color: darkblue;
-
-}
-
-.navbar ul li a:hover {
-    background: #000000;
-    color: #000;
-    transform: rotateX(90deg) translateY(-22px);
-        }
-
-.navbar ul li a::before {
-     position: absolute;
-     top: 100%;
-     left: 0px;
-     width: 100%;
-     padding: 2px 0px;
-     text-align: center;
-     line-height: 50px;
-     background: none repeat scroll 0% 0% #000000;
-     color: greenyellow;
-     content: attr(data-hover);
-     transition: #000000 0.3s ease 0s;
-     transform: rotateX(-90deg);
-     transform-origin: 50% 0px 0px;
-        }
-    
-
-.nav{
-
-}
-
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.card {
-    border-radius: 1px;
-    font-size: 20px;
-    font-family: 'Oleo Script', cursive;
-    border: solid;
-    border-color: white;
-    width: 30%;
-    position: relative;
-    text-align: center;
-    color: black;
-}
-
-.card img {
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-}
-
-
-.boatLinks {
-    font-size: 15px;
-    font-weight: bold;
-    z-index: 1;
-    height: 100%;
-}
-
-.nobull{
-    list-style-type: none;
 }*/
+
+    .card {
+        border-radius: 1px;
+        font-size: 20px;
+        font-family: 'Oleo Script', cursive;
+        border: solid;
+        border-color: white;
+        text-align: center;
+        color: black;
+    }
+
+    .boatLinks {
+        font-size: 15px;
+        font-weight: bold;
+        z-index: 1;
+        height: 100%;
+    }
+}
+
+    

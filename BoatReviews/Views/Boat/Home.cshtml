@@ -9,7 +9,57 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Home</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Main.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
+    <div class="wrapper-2">
+        <header>
+            <nav>
+                <div class="logo">Boat Reviews</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">All Boats</a></li>
+                        <li><a href="#">Boat Categories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="category-details">
+                    <h3>
+
+                    </h3>
+                </div>
+                <div class="boat-preview">
+                    <a href="/Boat">Back to list</a>
+                </div>
+
+                <script type="text/javascript">
+
+                    //Menu toggle-effect
+                    $(document).ready(function () {
+                        $(".menu-icon").on("click", function () {
+                            $("nav ul").toggleClass("showing");
+                        });
+                    });
+
+                    //Scrolling Effect
+                    $(window).on('scroll', function () {
+                        if ($(window).scrollTop()) {
+                            $('nav').addClass('black');
+                        }
+                        else {
+                            $('nav').removeClass('black')
+                        }
+                    })
+                </script>
 </body>
 </html>
