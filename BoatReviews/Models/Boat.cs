@@ -17,12 +17,15 @@ namespace BoatReviews.Models
         //private Details details = new Details();
         //public string BoatCategory { get; set; }
 
+        public virtual Category Category { get; set; }
+        
+
         public Boat()
         {
 
         }
 
-        }
-    }
+    
+}   }
 
 

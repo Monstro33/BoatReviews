@@ -21,7 +21,7 @@ namespace BoatReviews
             services.AddDbContext<BoatContext>();
             services.AddScoped<BoatRepository, BoatRepository>();
 
-            services.AddDbContext<CategoryContext>();
+            //services.AddDbContext<CategoryContext>();
             services.AddScoped<CategoryRepository, CategoryRepository>();
         }
 

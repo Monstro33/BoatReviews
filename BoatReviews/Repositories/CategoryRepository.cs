@@ -8,9 +8,9 @@ namespace BoatReviews.Repositories
 {
     public class CategoryRepository
     {
-        CategoryContext db;
+        BoatContext db;
 
-        public CategoryRepository(CategoryContext db)
+        public CategoryRepository(BoatContext db)
         {
             this.db = db;
         }

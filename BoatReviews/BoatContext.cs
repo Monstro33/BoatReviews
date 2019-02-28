@@ -11,9 +11,11 @@ namespace BoatReviews
     {
         public DbSet<Boat> Boats { get; set; }
 
+        public DbSet<Category> Categories { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=TM3CBoatReviews;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=ANewOne;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
                           .UseLazyLoadingProxies();
@@ -45,7 +47,30 @@ namespace BoatReviews
                 ImageLocation = "Img/WellcraftBig.jpg",
                 ReviewContent = "The Wellcraft 182 Fisherman is a center console boat designed for coastal fishing that can double as a family boat for cruising excursions along the shoreline. A single 90 to 150 -hp outboard provides the power in a notched transom. Her hull with a relatively high freeboard for a boat in her class is one of her most important qualities."
             });
-                
+
+
+            modelBuilder.Entity<Category>().HasData(
+                new Category()
+                {
+                    Id = 1,
+                    CategoryName = "Motorboats",
+                    CategoryImageLocation = "Img/Motorboat1.jpeg",
+                    CategoryContent = "Motorboats, also known as speedboats and powerboats, are boats propelled by an internal combustion or electric engine. Their length ranges from about 7 feet to 197 feet, while anything larger is called a ship. They are used recreationally and for sport, and come in many types, shapes, and sizes."
+                },
+                new Category()
+                {
+                    Id = 2,
+                    CategoryName = "Sailboat",
+                    CategoryImageLocation = "Img/Sailboat1.jpeg",
+                    CategoryContent = "Sailboats are boats propelled partly or entirely by sails. They range in length from about 6 feet to 400 feet, the longer of which are called sailing ships. They are used recreationally and for sport and come in many types, shapes, and sizes."
+                },
+                new Category()
+                {
+                    Id = 3,
+                    CategoryName = "Human Powered Boat",
+                    CategoryImageLocation = "Img/HPB1.jpg",
+                    CategoryContent = "Human-powered boats are propelled by human power. Human power is harnessed directly from the hands or feet, or through the hands and feet with oars, paddles, poles, pedals, or treadles. Their length ranges from about 3 feet to 144 feet. The are used recreationally and for sport and come in many types, shapes, and sizes."
+                });
 
             base.OnModelCreating(modelBuilder);
         }

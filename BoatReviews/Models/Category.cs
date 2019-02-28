@@ -12,6 +12,8 @@ namespace BoatReviews.Models
         public int Id { get; set; }
         public string CategoryImageLocation { get; set; }
         public string CategoryContent { get; set; }
+        public virtual IEnumerable<Boat> Boats { get; set; }
+
 
         public Category()
         {
