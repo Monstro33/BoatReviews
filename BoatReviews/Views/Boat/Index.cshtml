@@ -32,45 +32,46 @@
                     </ul>
                 </div>
                 <div class="header-1">
-                    <h3>Are you thinking about buying a boat? We've got lots of great reviews of new boats to help you make the right choice.</h3>
-                </div>
-                <div class="main-photos">
-                    <div class="photo-card">
-                        <img src="~/Img/SeaRayBig.jpg"/>
-                    </div>
-                    <div class="photo-card">
-                        <img src="~/Img/NitroBig.jpg"/>
-                    </div>
-                    <div class="photo-card">
-                        <img src="~/Img/WellcraftBig.jpg"/>
-                    </div>
+                    <h4>Are you thinking about buying a boat? We've got lots of great reviews of new boats to help you make the right choice.</h4>
                 </div>
             </nav>
         </header>
+        <div class="main">
+            <div class="card">
+                <img src="~/Img/SeaRayBig.jpg" />
+            </div>
+            <div class="card">
+                <img src="~/Img/NitroBig.jpg" />
+            </div>
+            <div class="card">
+                <img src="~/Img/WellcraftBig.jpg" />
+            </div>
+        </div>
+
         <div class="footer">
             <p>test</p>
         </div>
-   
-            <script type="text/javascript">
 
-                //Menu toggle-effect
-                $(document).ready(function () {
-                    $(".menu-icon").on("click", function () {
-                        $("nav ul").toggleClass("showing");
-                    });
+        <script type="text/javascript">
+
+            //Menu toggle-effect
+            $(document).ready(function () {
+                $(".menu-icon").on("click", function () {
+                    $("nav ul").toggleClass("showing");
                 });
+            });
 
-                //Scrolling Effect
-                $(window).on('scroll', function () {
-                    if ($(window).scrollTop()) {
-                        $('nav').addClass('black');
-                    }
-                    else {
-                        $('nav').removeClass('black')
-                    }
-                })
-            </script>
-        </div>
+            //Scrolling Effect
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop()) {
+                    $('nav').addClass('black');
+                }
+                else {
+                    $('nav').removeClass('black')
+                }
+            })
+        </script>
+    </div>
     </div>
 </body>
 </html>

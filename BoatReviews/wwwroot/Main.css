@@ -68,16 +68,6 @@ nav {
             font-size: 20px;
         }
 
-/*.menu-icon {
-    width: 100%;
-    background: #000;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 15px 40px;
-    color: #fff;
-    display: none;
-}*/
-
 @media(max-width:580px) {
     .logo {
         position: fixed;
@@ -122,53 +112,40 @@ nav {
 .boat-preview {
     margin-top: 10px;
     height: 30vh;
-    width: 75%
+    width: 75%;
 }
 
-.main-photos {
-    height: 50vh;
+    .main {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-top: 20px;
-        /*margin-bottom: 30px;*/
         align-content: flex-end;
-        width: 100%;
-        /*position: fixed;
-        bottom: 0;*/
-        background-color: white;
+        width: 200px;
+        position: fixed;
+        margin-bottom: 100px;
+        /*bottom: 0;*/
     }
 
-.photo-card {
-    display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-        margin-top: 30px;
-        align-content: flex-end;
-        margin: 10px auto;
-        display: block; 
-        -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-        -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-        -o-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-        position: relative;
+    .card {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        position: fixed;
         bottom: 0;
-        width: 10%;
-        object-fit: contain;
-        height: 25vh;
+        opacity: .1;
     }
 
-    .photo-card img {
-        border: 5px solid rgba(255, 255, 255, .1);
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: contain;
-        max-height: 5rem;
-    }
+        .card img {
+            border: 1px solid rgba(255, 255, 255, .1);
+            width: 100%;
+            display: block;
+            opacity: .1;
+        }
+        .image1 {
 
-        .photo-card:before {
+        }
+
+        /*.photo-card:before {
             content: "";
             position: relative;
             top: 0;
@@ -178,7 +155,7 @@ nav {
             background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
             background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
             background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
-        }
+        }*/
 
 .details-photo {
         margin: 30px auto;
@@ -235,4 +212,30 @@ nav {
     }
 }
 
-    
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    border-radius: 1px;
+    font-size: 20px;
+    font-family: 'Oleo Script', cursive;
+    border: solid;
+    border-color: white;
+    width: 30%;
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+    .card img {
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 100%;
+        /*border-radius: 10px;*/
+    }
