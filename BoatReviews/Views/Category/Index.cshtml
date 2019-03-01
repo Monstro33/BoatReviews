@@ -6,164 +6,87 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Categories</title>
-    <link href="~/Main.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 1200, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-    </script>
-</head>
-
-<body>
-    <div class="wrapper-1">
-        <header>
-            <nav>
-                <div class="logo">Boat Reviews</div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="/Category">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="/Boat">All Boats</a></li>
-                        <li><a href="/Category#categoriesOfBoats">Boat Categories</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="header-1">
-                    <h4>Are you thinking about buying a boat? We've got lots of great reviews of new boats to help you make the right choice.</h4>
-                </div>
-            </nav>
-        </header>
-        <div class="main" id="categoriesOfBoats">
-            <div class="card">
-                @foreach (var category in Model)
-                {
-                    <div class="row">
-                        @*<img src="@category.CategoryImageLocation" height="100" />*@
-                        <a href="/Category/Details/@category.Id"><h2>@category.CategoryName</h2></a>
-                        @*<p>@category.CategoryContent</p>*@
-                    </div>
-                }
-
-
-
-            </div>
-            @*<div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>*@
-        </div>
-        
-        <script type="text/javascript">
-
-            //Menu toggle-effect
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Categories</title>
+        <link href="~/Main.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
             $(document).ready(function () {
-                $(".menu-icon").on("click", function () {
-                    $("nav ul").toggleClass("showing");
+                // Add smooth scrolling to all links
+                $("a").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                        event.preventDefault();
+                        // Store hash
+                        var hash = this.hash;
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 1200, function () {
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
                 });
             });
-
-            //Scrolling Effect
-            $(window).on('scroll', function () {
-                if ($(window).scrollTop()) {
-                    $('nav').addClass('black');
-                }
-                else {
-                    $('nav').removeClass('black')
-                }
-            })
         </script>
-    </div>
-    </div>
-</body>
-@*<body>
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="nav-icon">
-                    <i class=" fa fa-bars fa-2x"></i>
+    </head>
+    <body>
+        <div class="wrapper-1">
+            <header>
+                <nav>
+                    <div class="logo">Boat Reviews</div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="/Category">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="/Boat">All Boats</a></li>
+                            <li><a href="/Category#categoriesOfBoats">Boat Categories</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-1">
+                        <h4>Are you thinking about buying a boat? We've got lots of great reviews of new boats to help you make the right choice.</h4>
+                    </div>
+                </nav>
+            </header>
+            <div class="main" id="categoriesOfBoats">
+                <div class="card">
+                    @foreach (var category in Model)
+                    {
+                        <div class="row">
+                            @*<img src="@category.CategoryImageLocation" height="100" />*@
+                            <a href="/Category/Details/@category.Id"><h2>@category.CategoryName</h2></a>
+                            @*<p>@category.CategoryContent</p>*@
+                        </div>
+                    }
                 </div>
-                <div class="logo">Boat Reviews</div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="~/boat#allBoats">All Boats</a></li>
-                        <li><a href="~/category#boatCategories">Boat Categories</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="boat icon">
-                <img:
             </div>
-        </header>
-        <div class="main" id="boatCategories">
-            @*<h1>Howdy, Joe!</h1>
-            <h1>Howdy, Joe!</h1>
-            <h1>Howdy, Joe!</h1>
-            <h1>Howdy, Joe!</h1>
-            <h1>Howdy, Joe!</h1>*@
-            @*@foreach (var category in Model)
-            {
-                <div class="row">
-                    <img src="@category.CategoryImageLocation" height="100" />
-                    <h2>@category.CategoryName</h2>
-                    <p>@category.CategoryContent</p>
-                </div>
-            }
-
             <script type="text/javascript">
-
                 //Menu toggle-effect
                 $(document).ready(function () {
                     $(".menu-icon").on("click", function () {
                         $("nav ul").toggleClass("showing");
                     });
                 });
-
                 //Scrolling Effect
                 $(window).on('scroll', function () {
-                    if ($(window).scrollTop()) {
-                        $('nav').addClass('black');
-                    }
-                    else {
-                        $('nav').removeClass('black')
-                    }
+                if ($(window).scrollTop()) {
+                    $('nav').addClass('black');
+                }
+                else {
+                    $('nav').removeClass('black')
+                }
                 })
             </script>
         </div>
-    </div>
-</body>*@
+    </body>
 </html>

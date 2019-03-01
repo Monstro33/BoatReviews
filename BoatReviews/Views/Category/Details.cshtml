@@ -17,29 +17,33 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="~/sweetsauce.js"></script>
 </head>
-<body>
-    <div class="wrapper-2">
-        <header>
-            <nav>
-                <div class="logo">Boat Reviews</div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">All Boats</a></li>
-                        <li><a href="#">Boat Categories</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="category-details">
-                    <h3>@Model.CategoryName</h3>
-                </div>
-                <div class="boat-preview">
-                    <img src="~/@Model.CategoryImageLocation" />
-                    <p>@Model.CategoryContent</p>
-                    <a href="/Boat">Back to list</a>
-                </div>
+    <body>
+        <div class="wrapper-2">
+            <header>
+                <nav>
+                    <div class="logo">Boat Reviews</div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="/Category">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="/Boat">All Boats</a></li>
+                            <li><a href="/Category#categoriesOfBoats">Boat Categories</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="category-details">
+            <h3>@Model.CategoryName</h3>
+        </div>
+        <div class="boat-preview">
+            <img src="~/@Model.CategoryImageLocation" />
+            <p>@Model.CategoryContent</p>
+            <a href="/Category">Back to Categories List...</a>
+        </div>
                 <script type="text/javascript">//Menu toggle-effect
                     $(document).ready(function () {
                         $(".menu-icon").on("click", function () {

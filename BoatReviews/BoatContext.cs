@@ -55,7 +55,8 @@ namespace BoatReviews
                     Id = 1,
                     CategoryName = "Motorboats",
                     CategoryImageLocation = "Img/Motorboat1.jpeg",
-                    CategoryContent = "Motorboats, also known as speedboats and powerboats, are boats propelled by an internal combustion or electric engine. Their length ranges from about 7 feet to 197 feet, while anything larger is called a ship. They are used recreationally and for sport, and come in many types, shapes, and sizes."
+                    CategoryContent = "Motorboats, also known as speedboats and powerboats, are boats propelled by an internal combustion or electric engine. Their length ranges from about 7 feet to 197 feet, while anything larger is called a ship. They are used recreationally and for sport, and come in many types, shapes, and sizes.",
+                    //CategoryURL = "/Boat"
                 },
                 new Category()
                 {
