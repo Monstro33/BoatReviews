@@ -1,31 +1,36 @@
-﻿body {
-    margin: 0;
-    padding: 0;
+﻿
+body {
     width: 100%;
     min-width: 25%;
     font-family: Poppins;
-    color: sandybrown;
     text-align: center;
+    height: 100vh;
 }
 
 header {
     width: 100%;
-    height: 50vh;
+    height: 35vh;
 }
 
-.header-1 {
+.header-2 {
     background-color: rgba(158, 246, 211, 0.2);
     padding: 2px;
+    text-align: center;
+    color: whitesmoke;
 }
 
 .wrapper-1 {
     background: url(Img/WallPaper.jpg) no-repeat 50% 50%;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
 .wrapper-2 {
     background: url(Img/HdFence.jpg) no-repeat 50% 50%;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
 .logo {
@@ -95,64 +100,61 @@ nav {
         text-align: center;
     }
 
-    /*.menu-icon {
-        display: block;
+.row {
+    margin: 0 auto;
+    width: 25%;
+    height: 250px;
+    opacity: .3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightgray;
+    opacity: .5;
+}
+
+    a {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+        border: solid;
+        border-color: white;
+    }
+
+    /*a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
     }*/
 
-
-    .category-details {
-        background-color: rgba(158, 246, 211, 0.2);
-        position: fixed;
-        margin-top: 5px;
-        margin-bottom: 10px;
-        width: 65%;
-        height: 20vh;
+.category-details {
+    background-color: rgba(158, 246, 211, 0.2);
+    position: fixed;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 65%;
+    height: 20vh;
+    align-content: center;
     }
 
-    .boat-preview {
-        margin-top: 10px;
-        height: 30vh;
-        width: 75%;
-    }
-
-    .main {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-content: flex-end;
-        width: 200px;
-        position: fixed;
-        margin-bottom: 100px;
-        /*bottom: 0;*/
-    }
-
-    .card {
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        position: fixed;
-        bottom: 0;
-        opacity: .1;
-    }
-
-        .card img {
-            border: 1px solid rgba(255, 255, 255, .1);
-            width: 100%;
-            display: block;
-            opacity: .1;
-        }
-
-    /*.photo-card:before {
-            content: "";
-            position: relative;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
-            background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
-            background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
-        }*/
+.boat-preview {
+    margin-top: 10px;
+    height: 30vh;
+    width: 75%;
+    align-content:center;
+}
 
     .details-photo {
         margin: 30px auto;
@@ -175,65 +177,6 @@ nav {
             background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
             background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
         }
-
-
-    /*.background {
-    background-image: url(Img/HdFence.jpg);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: .5;
-}*/
-
-    .card {
-        border-radius: 1px;
-        font-size: 20px;
-        font-family: 'Oleo Script', cursive;
-        border: solid;
-        border-color: white;
-        text-align: center;
-        color: black;
-    }
-
-    .boatLinks {
-        font-size: 15px;
-        font-weight: bold;
-        z-index: 1;
-        height: 100%;
-    }
 }
 
-
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.card {
-    border-radius: 1px;
-    font-size: 20px;
-    font-family: 'Oleo Script', cursive;
-    border: solid;
-    border-color: white;
-    width: 30%;
-    position: relative;
-    text-align: center;
-    color: black;
-}
-
-    .card img {
-        margin-left: auto;
-        margin-right: auto;
-        height: 100%;
-        width: 100%;
-        /*border-radius: 10px;*/
-    }
 

@@ -12,20 +12,21 @@
     <link href="~/Main.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
 </head>
-<div class="navbar">
-    <ul>
-        <li><a class="current" href="#" data-hover="Home">Home</a></li>
-        <li><a href="#" data-hover="About">About</a></li>
-        <li><a href="~/boat" data-hover="All Boats">All Boats</a></li>
-        <li><a href="#" data-hover="Contact">Contact</a></li>
-    </ul>
-</div>
 <body>
-    <div id="main-2">
+    <div class="wrapper-2">
+        <div class="navbar">
+            <ul>
+            <li><a class="current" href="#" data-hover="Home">Home</a></li>
+            <li><a href="#" data-hover="About">About</a></li>
+            <li><a href="~/boat" data-hover="All Boats">All Boats</a></li>
+            <li><a href="#" data-hover="Contact">Contact</a></li>
+        </ul>
+        </div>
+    <div class="category-details">
         <div class="details-photo">
             <img src="~/@Model.ImageLocation" />
         </div>
-        <div class="full-details">
+        <div class="boat-preview">
             <h1>@Model.Name</h1>
             <p>@Model.ReviewContent</p>
             <a href="/Boat">Back to list</a>

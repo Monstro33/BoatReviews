@@ -37,24 +37,30 @@
                 </div>
                 <div class="boat-preview">
                     <img src="~/@Model.CategoryImageLocation" />
-                    <p>@Model.CategoryContent</p>
+                    <h2>@Model.CategoryContent</h2>
                     <a href="/Boat">Back to list</a>
                 </div>
-                <script type="text/javascript">//Menu toggle-effect
-                    $(document).ready(function () {
-                        $(".menu-icon").on("click", function () {
-                            $("nav ul").toggleClass("showing");
-                        });
-                    });
 
-                    //Scrolling Effect
-                    $(window).on('scroll', function () {
-                        if ($(window).scrollTop()) {
-                            $('nav').addClass('black');
-                        }
-                        else {
-                            $('nav').removeClass('black')
-                        }
-                    })</script>
+                <script type="text/javascript">
+               //Menu toggle-effect
+                $(document).ready(function () {
+                $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+                });
+                });
+
+                //Scrolling Effect
+                $(window).on('scroll', function () {
+                if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+                }
+                else {
+                $('nav').removeClass('black')
+                }
+                })
+                </script>
+            </nav>
+            </header>
+        </div>
     </body>
 </html>

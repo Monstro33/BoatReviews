@@ -17,87 +17,52 @@
     @*<script src="~/sweetsauce.js"></script>*@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-    </script>
-    <script type="text/javascript">
-
-        //Menu toggle-effect
-        $(document).ready(function () {
-            $(".menu-icon").on("click", function () {
-                $("nav ul").toggleClass("showing");
-            });
-        });
-
-        //Scrolling Effect
-        $(window).on('scroll', function () {
-            if ($(window).scrollTop()) {
-                $('nav').addClass('black');
-            }
-            else {
-                $('nav').removeClass('black')
-            }
-        })
-    </script>
-</head>
-<body>
-    <div class="wrapper">
+    <script type="text/javascript"></script>   
+    </head>
+    <body>
+    <div class="wrapper-1">
         <header>
             <nav>
-                <div class="nav-icon">
-                    <i class=" fa fa-bars fa-2x"></i>
-                </div>
                 <div class="logo">Boat Reviews</div>
                 <div class="menu">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#allBoats">All Boats</a></li>
-                        <li><a href="~/category">Boat Categories</a></li>
+                        <li><a href="#">All Boats</a></li>
+                        <li><a href="#">Boat Categories</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </nav>
-            <div class="boat icon">
-                @*<img:*@
+            <div class="boat-row">
+                @foreach (var boat in Model)
+                 {
+                    <img src="@boat.ImageLocation" height="100" />
+                    <a href="/Boat/Details/@boat.Id">@boat.Name</a>
+                 }
             </div>
         </header>
-        <div class="main" id="allBoats">
-            
-            @foreach (var boat in Model)
-            {
-                <div class="row">
-                    <img src="@boat.ImageLocation" height="100"/>
-                    <a href="/Boat/Details/@boat.Id">@boat.Name</a>
-
-                </div>
-            }
-
-        </div>
     </div>
-</body>
+
+    <script type="text/javascript">
+
+                    //Menu toggle-effect
+                    $(document).ready(function () {
+                        $(".menu-icon").on("click", function () {
+                            $("nav ul").toggleClass("showing");
+                        });
+                    });
+
+                    //Scrolling Effect
+                    $(window).on('scroll', function () {
+                        if ($(window).scrollTop()) {
+                            $('nav').addClass('black');
+                        }
+                        else {
+                            $('nav').removeClass('black')
+                        }
+                    })
+    </script>
+    </body>
 </html>
 
