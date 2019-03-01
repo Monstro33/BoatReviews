@@ -24,10 +24,10 @@
                 <div class="logo">Boat Reviews</div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="/category">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">All Boats</a></li>
-                        <li><a href="#">Boat Categories</a></li>
+                        <li><a href="/boat">All Boats</a></li>
+                        <li><a href="/category">Boat Categories</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -39,8 +39,7 @@
         <div class="row">
                 @foreach (var category in Model)
                 {
-                    <div class="column">
-                        @*<img src="@category.CategoryImageLocation" height="100" />*@
+                    <div class="column">                     
                         <a href="/Category/Details/@category.Id"><h2>@category.CategoryName</h2></a>
                         @*<p>@category.CategoryContent</p>*@
                     </div>

@@ -25,21 +25,24 @@
                 <div class="logo">Boat Reviews</div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="/category">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">All Boats</a></li>
-                        <li><a href="#">Boat Categories</a></li>
+                        <li><a href="/boat">All Boats</a></li>
+                        <li><a href="/category">Boat Categories</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="category-details">
-                    <h3>@Model.CategoryName</h3>
+                <div class="category-name"><h1>@Model.CategoryName</h1>
                 </div>
-                <div class="boat-preview">
-                    <img src="~/@Model.CategoryImageLocation" />
-                    <h2>@Model.CategoryContent</h2>
-                    <a href="/Boat">Back to list</a>
-                </div>
+                <div class="category-info">
+                    <div class="boat-preview">
+                        <img src="~/@Model.CategoryImageLocation" /> 
+                    </div>
+                    <div class="category-details">
+                        <h2>@Model.CategoryContent</h2>
+                        <p><a href="/Boat">Back to list</a></p>
+                    </div>
+                 </div>
 
                 <script type="text/javascript">
                //Menu toggle-effect

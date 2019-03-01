@@ -14,37 +14,36 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    @*<script src="~/sweetsauce.js"></script>*@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript"></script>   
-    </head>
-    <body>
-    <div class="wrapper-1">
+</head>
+<body>
+    <div class="wrapper-2">
         <header>
             <nav>
                 <div class="logo">Boat Reviews</div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="/category">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">All Boats</a></li>
-                        <li><a href="#">Boat Categories</a></li>
+                        <li><a href="/boat">All Boats</a></li>
+                        <li><a href="/category">Boat Categories</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </nav>
-            <div class="boat-row">
-                @foreach (var boat in Model)
-                 {
-                    <img src="@boat.ImageLocation" height="100" />
-                    <a href="/Boat/Details/@boat.Id">@boat.Name</a>
-                 }
-            </div>
         </header>
-    </div>
+        <div class="all-boats">
+            @foreach (var boat in Model)
+            {
+                <img src="@boat.ImageLocation" height="100" />
+                <a href="/Boat/Details/@boat.Id">@boat.Name</a>
+            }
+                 <p><a href="/Boat">Back to list</a></p>
+        </div>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
 
                     //Menu toggle-effect
                     $(document).ready(function () {
@@ -62,7 +61,7 @@
                             $('nav').removeClass('black')
                         }
                     })
-    </script>
+        </script>
     </body>
 </html>
 
