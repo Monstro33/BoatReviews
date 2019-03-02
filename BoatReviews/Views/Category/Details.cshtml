@@ -32,35 +32,41 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="category-name"><h1>@Model.CategoryName</h1>
+                <div class="category-name">
+                    <h1>@Model.CategoryName</h1>
                 </div>
                 <div class="category-info">
                     <div class="boat-preview">
-                        <img src="~/@Model.CategoryImageLocation" /> 
+                        <img src="~/@Model.CategoryImageLocation" />
                     </div>
                     <div class="category-details">
                         <h2>@Model.CategoryContent</h2>
                         <p><a href="/Boat">Back to list</a></p>
                     </div>
-                 </div>
+                </div>
+
+                @foreach (var boat in Model.Boats)
+                {
+                    <h1>@boat.Name</h1>
+                }
 
                 <script type="text/javascript">
-               //Menu toggle-effect
-                $(document).ready(function () {
-                $(".menu-icon").on("click", function () {
-                $("nav ul").toggleClass("showing");
-                });
-                });
+                    //Menu toggle-effect
+                    $(document).ready(function () {
+                        $(".menu-icon").on("click", function () {
+                            $("nav ul").toggleClass("showing");
+                        });
+                    });
 
-                //Scrolling Effect
-                $(window).on('scroll', function () {
-                if ($(window).scrollTop()) {
-                $('nav').addClass('black');
-                }
-                else {
-                $('nav').removeClass('black')
-                }
-                })
+                    //Scrolling Effect
+                    $(window).on('scroll', function () {
+                        if ($(window).scrollTop()) {
+                            $('nav').addClass('black');
+                        }
+                        else {
+                            $('nav').removeClass('black')
+                        }
+                    })
                 </script>
             </nav>
             </header>

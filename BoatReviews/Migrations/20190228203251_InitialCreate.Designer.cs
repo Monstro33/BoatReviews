@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BoatReviews.Migrations
 {
     [DbContext(typeof(BoatContext))]
-    [Migration("20190228195722_InitialCreate")]
+    [Migration("20190228203251_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

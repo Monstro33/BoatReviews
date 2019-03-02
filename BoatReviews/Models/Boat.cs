@@ -10,15 +10,10 @@ namespace BoatReviews.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string ImageLocation { get; set; }
-        //public List<string> Reviews { get; set; }
-        //public List<string> Images { get; set; }
         public string ReviewContent { get; set; }
-        //public string Images { get; set; }
-        //private Details details = new Details();
-        //public string BoatCategory { get; set; }
-
-        public virtual Category Category { get; set; }
         
+        public virtual Category Category { get; set; }
+        public int CategoryId { get; set; }
 
         public Boat()
         {
