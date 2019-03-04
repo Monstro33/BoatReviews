@@ -25,5 +25,21 @@ namespace BoatReviews.Repositories
         {
             return db.Boats.Single(boat => boat.Id == id);
         }
+
+        public void Create(Boat boat )
+        {
+            db.Boats.Add(boat);
+            db.SaveChanges(); 
+        }
+        public void Delete(Boat boat)
+        {
+            db.Boats.Remove(boat);
+            db.SaveChanges();
+        }
+        public void Edit(Boat boat)
+        {
+            db.Boats.Update(boat);
+            db.SaveChanges();
+        }
     }
 }

@@ -341,140 +341,16 @@ header {
     display: inline-block;
 }
 
-/*//import compass
-@import "compass";*/
-
-
 .user-reviews-form {
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
 }
 
-.input-block {
-    background-color: rgba(0,0,0,0.08)
-    border: solid 1px #FF512F;
-    width: 100%;
-    height: 60px;
-    padding: 25px;
-    position: relative;
-    margin-bottom: 20px;
-    @include transition(all 0.3s ease-out);
+.forms-group {
+    width: 90%;
+    height: 30%;
 }
 
-    .input-block focus {
-        background-color: #fff;
-        border: solid 1px darken(#FF512F);
-    }
-
-.input-block textarea {
-    height: auto;
-}
-
-.form-control {
-    height: auto;
-    resize: none;
-}
-
-label {
-    position: absolute;
-    left: 25px;
-    top: 25px;
-    display: block;
-    margin: 0;
-    font-weight: 300;
-    z-index: 1;
-    color: #333;
-    font-size: 18px;
-    line-height: 10px;
-}
-
-.form-control {
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    @include border-radius(0);
-    @include box-shadow(none);
-    height: auto;
-    position: relative;
-    z-index: 2;
-    font-size: 18px;
-    color: #333;
-}
-
-.form-control:focus {
-        label {
-            top: 0;
-              }
-}
-
-.square-button {
-    background-color: rgba(white, .8);
-    color: darken(#FF512F);
-    font-size: 26px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    @include border-radius(2px);
-    @include transition(all 0.3s ease);
-    padding: 0 60px;
-    height: 60px;
-    border: none;
-    width: 100%;
-}
-    
-    .square-button:hover, .square-button:focus {
-    background-color: white;
-}
-
-//tablet and above devices
-@media (min-width: 768px) .reviews-wrap {
-        width: 60%;
-        margin: auto;
-    }
-}
-
-//////////////////////////
-/*----page styles---*/
-//////////////////////////
-
-.reviews-wrap {
-    padding: 15px;
-}
-
-.reviews-wrap h1 {
-    background-color: white;
-    color: lighten($primary-color, 10%);
-    padding: 40px;
-    margin: 0 0 50px;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    small
-
-{
-    font-size: 18px;
-    display: block;
-    text-transform: none;
-    font-weight: 300;
-    margin-top: 10px;
-    color: lighten($primary-color, 10%);
-}
-
-{
-    font-style: normal;
-    color: #F50057;
-    font-size: 14px;
-    position: relative;
-    top: 2px;
-}
-
-.reviews-wrap a {
-    color: #fff;
-    text-decoration: none;
-}
-    
-    
-.reviews-wrap a:hover {
-    text-decoration: underline;
-}
 
