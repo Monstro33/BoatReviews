@@ -13,6 +13,7 @@
     <title>Index</title>
     <link href="~/Main.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,15 +33,18 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="category-name"><h1>@Model.CategoryName</h1>
+                <div class="category-name">
+                    <h1>@Model.CategoryName</h1>
                 </div>
                 <div class="category-info">
-                    <div class="boat-preview">
-                        <img src="~/@Model.CategoryImageLocation" /> 
-                    </div>
-                    <div class="category-details">
-                        <h2>@Model.CategoryContent</h2>
-                        <p><a href="/Boat">Back to list</a></p>
+                    <div class="category-info2">
+                        <div class="category-preview">
+                            <img src="~/@Model.CategoryImageLocation" />
+                        </div>
+                        <div class="category-details">
+                            <h3>@Model.CategoryContent</h3>
+                            <p><a href="/category">Back to list</a></p>
+                        </div>
                     </div>
                  </div>
 

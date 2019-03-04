@@ -11,12 +11,13 @@
     <title>Index</title>
     <link href="~/Main.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript"></script>   
+    <script type="text/javascript"></script>
 </head>
 <body>
     <div class="wrapper-2">
@@ -33,35 +34,47 @@
                     </ul>
                 </div>
             </nav>
-        </header>
+            <div class="info-title">
+                <h2>Click On A Boat Below To Read A Review</h2>
+            </div>
+        </header>        
         <div class="all-boats">
-            @foreach (var boat in Model)
-            {
-                <img src="@boat.ImageLocation" height="100" />
-                <a href="/Boat/Details/@boat.Id">@boat.Name</a>
-            }
-                 <p><a href="/Boat">Back to list</a></p>
+            <div class="all-boats2"> 
+                <div class="all-boats-list">
+                    @foreach (var boat in Model)
+                    {
+                        <img src="@boat.ImageLocation"/>
+                    }
+                </div>
+                <div class="all-boats-links">
+                    @foreach (var boat in Model)
+                    {
+                        <a href="/Boat/Details/@boat.Id">@boat.Name</a>
+                    }
+                </div>
+                    @*<p><a href="/Boat">Back to list</a></p>*@
+            </div>
+
+            <script type="text/javascript">
+                //Menu toggle-effect
+                $(document).ready(function () {
+                $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+                });
+                });
+
+                //Scrolling Effect
+                $(window).on('scroll', function () {
+                if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+                }
+                else {
+                $('nav').removeClass('black')
+                }
+                })
+            </script>
         </div>
-
-        <script type="text/javascript">
-
-                    //Menu toggle-effect
-                    $(document).ready(function () {
-                        $(".menu-icon").on("click", function () {
-                            $("nav ul").toggleClass("showing");
-                        });
-                    });
-
-                    //Scrolling Effect
-                    $(window).on('scroll', function () {
-                        if ($(window).scrollTop()) {
-                            $('nav').addClass('black');
-                        }
-                        else {
-                            $('nav').removeClass('black')
-                        }
-                    })
-        </script>
-    </body>
+    </div>
+</body>
 </html>
 

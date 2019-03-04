@@ -2,21 +2,22 @@
 body {
     width: 100%;
     min-width: 25%;
-    font-family: Poppins;
+    font: 'Great Vibes'; 
+    color: #fff;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
     text-align: center;
     height: 100vh;
 }
 
 header {
     width: 100%;
-    height: 40vh;
+    height: 30vh;
 }
 
 .header-2 {
     background-color: rgba(158, 246, 211, 0.2);
     padding: 2px;
     text-align: center;
-    color: whitesmoke;
 }
 
 .wrapper-1 {
@@ -40,6 +41,8 @@ header {
     color: navy;
     font-weight: bold;
     font-size: 24px;
+    font: 'Pacifico';
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
 }
 
 .nav {
@@ -120,12 +123,9 @@ header {
     display: block;
 }
 
-    .column a {
-        color: white;
-        text-decoration: none;
+.column a {
         border: solid;
         border-color: white;
-        font-family: Poppins;
         border: 3px solid white;
         border-radius: 30px 30px;
         box-shadow: 5px 10px #888888;
@@ -136,75 +136,206 @@ header {
 
     .category-name {
         text-align: center;
+        color: black;
     }
 
 .category-info {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    margin: 10px;
     height: 60vh;
-    /*padding: 10px;*/
-    border: 5px solid white;
-    border-radius: 15px 50px;
-    box-shadow: 5px 10px rgba(34, 66, 32, 0.41);
     justify-content: space-around;
-    background-color: black;   
+    background-color: black;
+    box-sizing: border-box;
+    position: relative;
+    background: white;
+    background-image: linear-gradient(top right, #5D5D5B, #383838);
+    padding: 7px;
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    box-shadow: -1px 1px var(--blur) 1px rgba(0,0,0,0.10), -2px 2px var(--blur) 1px rgba(0,0,0,0.09), -3px 3px var(--blur) 1px rgba(0,0,0,0.08), -4px 4px var(--blur) 1px rgba(0,0,0,0.07), -5px 5px var(--blur) 1px rgba(0,0,0,0.06), -6px 6px var(--blur) 1px rgba(0,0,0,0.05), -7px 7px var(--blur) 1px rgba(0,0,0,0.04), -8px 8px var(--blur) 1px rgba(0,0,0,0.03), -9px 9px var(--blur) 1px rgba(0,0,0,0.03), -10px 10px var(--blur) 1px rgba(0,0,0,0.03), -11px 11px var(--blur) 1px rgba(0,0,0,0.03), -12px 12px var(--blur) 1px rgba(0,0,0,0.02), -13px 13px var(--blur) 1px rgba(0,0,0,0.02), -14px 14px var(--blur) 1px rgba(0,0,0,0.01), -15px 15px var(--blur) 1px rgba(0,0,0,0.01), -16px 16px var(--blur) 1px rgba(0,0,0,0.01);
+}
+
+.category-info:before {
+    content: ' ';
+    display: block;
+    padding-bottom: 140%;
+}
+
+.category-info2 {
+    left: 3%;
+    top: 2.5%;
+    box-shadow: inset -1px 1px 6px 1px rgba(0,0,0,.24);
+    width: 94%;
+    height: 95%;
+    background: black;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 18px;
+    box-sizing: border-box;
+    position: absolute;
+
+}
+
+.category-preview {
+    width: 40%;
+    height: 70%;
+}
+
+    .category-preview img {
+        box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+
+.category-details {
+    width: 45%;
+    height: 60%;
+    text-align: left;
+    color: white;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
+    background-size: cover;
+    background-position: center center;
+}
+
+.boat-details {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    justify-content: space-around;
+    background-color: black;
+    box-sizing: border-box;
+    position: relative;
+    background: white;
+    background-image: linear-gradient(top right, #5D5D5B, #383838);
+    padding: 7px;
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    box-shadow: -1px 1px var(--blur) 1px rgba(0,0,0,0.10), -2px 2px var(--blur) 1px rgba(0,0,0,0.09), -3px 3px var(--blur) 1px rgba(0,0,0,0.08), -4px 4px var(--blur) 1px rgba(0,0,0,0.07), -5px 5px var(--blur) 1px rgba(0,0,0,0.06), -6px 6px var(--blur) 1px rgba(0,0,0,0.05), -7px 7px var(--blur) 1px rgba(0,0,0,0.04), -8px 8px var(--blur) 1px rgba(0,0,0,0.03), -9px 9px var(--blur) 1px rgba(0,0,0,0.03), -10px 10px var(--blur) 1px rgba(0,0,0,0.03), -11px 11px var(--blur) 1px rgba(0,0,0,0.03), -12px 12px var(--blur) 1px rgba(0,0,0,0.02), -13px 13px var(--blur) 1px rgba(0,0,0,0.02), -14px 14px var(--blur) 1px rgba(0,0,0,0.01), -15px 15px var(--blur) 1px rgba(0,0,0,0.01), -16px 16px var(--blur) 1px rgba(0,0,0,0.01);
+}
+
+.boat-details:before {
+    content: ' ';
+    display: block;
+    padding-bottom: 140%;
+}
+
+.boat-details2 {
+    left: 3%;
+    top: 2.5%;
+    box-shadow: inset -1px 1px 6px 1px rgba(0,0,0,.24);
+    width: 94%;
+    height: 95%;
+    background: black;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 18px;
+    box-sizing: border-box;
+    position: absolute;
+
 }
 
 .boat-preview {
-    position: fixed;
-    left: 0;
-    margin-top:20px;
-    margin-left: 50px;
-    /*padding: 5px;*/
-    align-content: flex-end;
-    width: 35%;
-    height: 40%;
+    width: 40%;
+    height: 70%;
 }
 
-.category-details {
-    margin-top: 20px;
-    position: fixed;
-    right: 0;
-    margin-right: 20px;
-    padding: 5px;
-    text-align: left;
-    width: 45%;
-    height: 40%;
-    text-align: left;
-    color: white;
-}
-
-p {
-
-}
-
-.boat-preview img {
-    object-fit: cover;
-    object-position: center;
-}
+    .boat-preview img {
+        box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
 
 .boat-info {
-    position: fixed;
-    left: 0;
-    margin-right: 5px;
-    padding: 5px;
+    width: 45%;
+    height: 60%;
     text-align: left;
+    color: white;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.info-title {
+    height: 10%;
+    text-align: center;
+    color: black;
 }
 
 .all-boats {
     display: flex;
     flex-direction: row;
-    width: 80%;
-    height: 50vh;
-    padding: 10px;
-    border: 5px solid white;
-    border-radius: 15px 50px;
-    box-shadow: 5px 10px #888888;
+    height: 60vh;
+    justify-content: space-around;
+    background-color: black;
+    box-sizing: border-box;
+    position: relative;
+    background: white;
+    background-image: linear-gradient(top right, #5D5D5B, #383838);
+    padding: 7px;
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    box-shadow: -1px 1px var(--blur) 1px rgba(0,0,0,0.10), -2px 2px var(--blur) 1px rgba(0,0,0,0.09), -3px 3px var(--blur) 1px rgba(0,0,0,0.08), -4px 4px var(--blur) 1px rgba(0,0,0,0.07), -5px 5px var(--blur) 1px rgba(0,0,0,0.06), -6px 6px var(--blur) 1px rgba(0,0,0,0.05), -7px 7px var(--blur) 1px rgba(0,0,0,0.04), -8px 8px var(--blur) 1px rgba(0,0,0,0.03), -9px 9px var(--blur) 1px rgba(0,0,0,0.03), -10px 10px var(--blur) 1px rgba(0,0,0,0.03), -11px 11px var(--blur) 1px rgba(0,0,0,0.03), -12px 12px var(--blur) 1px rgba(0,0,0,0.02), -13px 13px var(--blur) 1px rgba(0,0,0,0.02), -14px 14px var(--blur) 1px rgba(0,0,0,0.01), -15px 15px var(--blur) 1px rgba(0,0,0,0.01), -16px 16px var(--blur) 1px rgba(0,0,0,0.01);
 }
 
-.all-boats img {
-    object-fit: cover;
-    object-position: center;
+    .all-boats:before {
+        content: ' ';
+        display: block;
+        padding-bottom: 140%;
     }
+
+.all-boats2 {
+    left: 3%;
+    top: 2.5%;
+    box-shadow: inset -1px 1px 6px 1px rgba(0,0,0,.24);
+    width: 94%;
+    height: 95%;
+    background: black;
+    align-items: center;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-around;*/
+    padding: 18px;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.all-boats-list {
+    width: 30%;
+    height: 50%;
+        box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
+        height: 60%;
+        width: 30%;
+        display: inline-block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+.all-boats-links {
+    display: inline-block;
+}
