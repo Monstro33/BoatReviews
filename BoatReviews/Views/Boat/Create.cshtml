@@ -21,6 +21,9 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="CategoryId" class="control-label"></label>
+                    <input type="radio" name="categoryId" value="1"> Motorboat<br>
+                    <input type="radio" name="categoryId" value="2"> Sailboat<br>
+                    <input type="radio" name="categoryId" value="3"> Human Powered Boat<br>
                     <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
                 </div>
                 <div class="form-group">
