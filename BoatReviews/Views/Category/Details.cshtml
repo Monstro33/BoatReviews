@@ -36,19 +36,20 @@
                 <div class="category-name">
                     <h1>@Model.CategoryName</h1>
                 </div>
-                <div class="category-info">
-                    <div class="category-info2">
-                        <div class="category-preview">
-                            <img src="~/@Model.CategoryImageLocation" />
-                        </div>
-                        <div class="category-details">
-                            <h3>@Model.CategoryContent</h3>
-                            <p><a href="/category">Back to list</a></p>
-                        </div>
-                    </div>
-                 </div>
+            </nav>
+        </header>
+        <div class="category-info">
+            <div class="category-info2">
+                <div class="category-preview">
+                    <img src="~/@Model.CategoryImageLocation" />
+                </div>
+                <div class="category-details">
+                    <h3>@Model.CategoryContent</h3>
+                    <p><a href="/category">Back to list</a></p>
+                </div>
+            </div>
 
-                <script type="text/javascript">
+            <script type="text/javascript">
                //Menu toggle-effect
                 $(document).ready(function () {
                 $(".menu-icon").on("click", function () {
@@ -65,9 +66,8 @@
                 $('nav').removeClass('black')
                 }
                 })
-                </script>
-            </nav>
-            </header>
+            </script>
         </div>
-    </body>
+    </div>
+</body>
 </html>

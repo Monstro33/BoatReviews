@@ -1,0 +1,105 @@
+﻿@model BoatReviews.Models.Boat
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Main.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript"></script>
+</head>
+<body>
+    <div class=".reviews-wrap">
+        <header>
+            <nav>
+                <div class="logo">Boat Reviews</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/category">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/boat">All Boats</a></li>
+                        <li><a href="/category">Boat Categories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="user-reviews">
+            <form action="" class="user-reviews-form">
+                <div class="col-sm-6">
+                    <div class="name-input-block">
+                        <label for="">First Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <label for="">City</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <label for="">Boat Category</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <label for="">Boat Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="input-block textarea">
+                        <label for="">Type your review here</label>
+                        <textarea rows="3" type="text" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button class="square-button">Send</button>
+                </div>
+            </form>
+        </section>
+
+            <script type="text/javascript">
+                //Menu toggle-effect
+                $(document).ready(function () {
+                    $(".menu-icon").on("click", function () {
+                        $("nav ul").toggleClass("showing");
+                    });
+                });
+
+                //Scrolling Effect
+                $(window).on('scroll', function () {
+                    if ($(window).scrollTop()) {
+                        $('nav').addClass('black');
+                    }
+                    else {
+                        $('nav').removeClass('black')
+                    }
+                })
+            </script>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

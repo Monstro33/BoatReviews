@@ -27,6 +27,8 @@ namespace BoatReviews.Controllers
             var model = boatRepo.GetById(id);
             return View(model);
         }
+
+
     }
 }
  
