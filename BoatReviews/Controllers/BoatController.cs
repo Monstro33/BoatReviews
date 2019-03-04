@@ -1,4 +1,5 @@
-﻿using BoatReviews.Repositories;
+﻿using BoatReviews.Models;
+using BoatReviews.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,43 @@ namespace BoatReviews.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Boat boat)
+        {
+            boatRepo.Create(boat);
+            return RedirectToAction("Index");
 
+        }
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = boatRepo.GetById(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Delete(Boat boat)
+        {
+            boatRepo.Delete(boat);
+            return RedirectToAction("Index");
+
+        }
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            var model = boatRepo.GetById(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Edit(Boat boat)
+        {
+            boatRepo.Edit(boat);
+            return RedirectToAction("Details/" + boat.Id);
+        }
     }
 }
  

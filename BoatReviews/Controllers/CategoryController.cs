@@ -26,7 +26,7 @@ namespace BoatReviews.Controllers
             var model = categoryRepo.GetById(id);
             return View(model);
         }
-        public string foo(int id)
+        public string Foo(int id)
         {
             return (id.ToString());
         }
