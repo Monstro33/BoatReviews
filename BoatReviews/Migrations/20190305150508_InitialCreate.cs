@@ -67,7 +67,7 @@ namespace BoatReviews.Migrations
             migrationBuilder.InsertData(
                 table: "Boats",
                 columns: new[] { "Id", "CategoryId", "ImageLocation", "Name", "ReviewContent" },
-                values: new object[] { 2, 1, "Img/SeaRayBig.jpg", "Sea Ray", "Sea Ray has moved to fill a gap between its affordable “sport” lineup and the luxury SLX models and created a somewhat cost-conscious line that still embraces an upscale look. The result is the SPX Series. Affordable, but depending on how she gets optioned out, still embraces many of the amenities that the brand is well known for. Perhaps most importantly, the hulls are the same as her more expensive siblings, and for that reason we expect the ride and the handling to be on a par with them." });
+                values: new object[] { 2, 1, "~/Img/SeaRayBig.jpg", "Sea Ray", "Sea Ray has moved to fill a gap between its affordable “sport” lineup and the luxury SLX models and created a somewhat cost-conscious line that still embraces an upscale look. The result is the SPX Series. Affordable, but depending on how she gets optioned out, still embraces many of the amenities that the brand is well known for. Perhaps most importantly, the hulls are the same as her more expensive siblings, and for that reason we expect the ride and the handling to be on a par with them." });
 
             migrationBuilder.InsertData(
                 table: "Boats",
