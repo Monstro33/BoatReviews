@@ -331,8 +331,7 @@ header {
     padding: 3px;
     }
 .all-boats-list img {
-    width: 30%;
-    height: 100%;
+    object-fit: contain;
 }
 
 .all-boats-links {
@@ -342,10 +341,15 @@ header {
 }
 
 .user-reviews-form {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 90%;
+    width: 75%;
+    height: 75vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
 }
 
 .form-group {
