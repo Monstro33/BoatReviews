@@ -15,24 +15,14 @@ namespace BoatReviews.Repositories
             this.db = db;
         }
 
-        public IEnumerable<Boat> GetAll()
+        public IEnumerable<Category> GetAll()
         {
-            return db.Boats.ToList();
+            return db.Categories.ToList();
         }
 
-        public object GetById(int id)
+        public Category GetById(int id)
         {
             return db.Categories.Single(category => category.Id == id);
         }
-
-        //object ICategoryRepository.GetAll()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //object ICategoryRepository.GetById(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
