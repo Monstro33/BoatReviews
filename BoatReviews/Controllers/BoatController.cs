@@ -10,22 +10,22 @@ namespace BoatReviews.Controllers
 {
     public class BoatController : Controller
     {
-        BoatRepository boatRepo;
+        IBoatRepository repo;
 
-        public BoatController(BoatRepository boatRepo)
+        public BoatController(IBoatRepository repo)
         {
-            this.boatRepo = boatRepo;
+            this.repo = repo;
         }
 
         public ViewResult Index()
         {
-            var model = boatRepo.GetAll();
+            var model = repo.GetAll();
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-            var model = boatRepo.GetById(id);
+            var model = repo.GetById(id);
             return View(model);
         }
 
@@ -34,36 +34,41 @@ namespace BoatReviews.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Create(Boat boat)
         {
-            boatRepo.Create(boat);
+            repo.Create(boat);
             return RedirectToAction("Index");
 
         }
+
         [HttpGet]
         public ViewResult Delete(int id)
         {
-            var model = boatRepo.GetById(id);
+            var model = repo.GetById(id);
             return View(model);
         }
+
         [HttpPost]
         public ActionResult Delete(Boat boat)
         {
-            boatRepo.Delete(boat);
+            repo.Delete(boat);
             return RedirectToAction("Index");
 
         }
+
         [HttpGet]
         public ViewResult Edit(int id)
         {
-            var model = boatRepo.GetById(id);
+            var model = repo.GetById(id);
             return View(model);
         }
+
         [HttpPost]
         public ActionResult Edit(Boat boat)
         {
-            boatRepo.Edit(boat);
+            repo.Update(boat);
             return RedirectToAction("Details/" + boat.Id);
         }
     }

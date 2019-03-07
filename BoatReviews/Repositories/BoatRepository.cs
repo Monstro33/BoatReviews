@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace BoatReviews.Repositories
 {
 
-    public class BoatRepository
+    public class BoatRepository : IBoatRepository
     {
         BoatContext db;
         
@@ -36,10 +36,15 @@ namespace BoatReviews.Repositories
             db.Boats.Remove(boat);
             db.SaveChanges();
         }
-        public void Edit(Boat boat)
+        public void Update(Boat boat)
         {
             db.Boats.Update(boat);
             db.SaveChanges();
+        }
+
+        Boat IBoatRepository.GetById(int id)
+        {
+            return db.Boats.Single(boat => boat.Id == id);
         }
     }
 }

@@ -324,15 +324,16 @@ header {
 }
 
 .all-boats-list {
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px);
+    /*width: 100%;
     height: 80%;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
     display: inline-block;
-    padding: 3px;
-    }
+    padding: 3px;*/
+}
 .all-boats-list img {
-    width: 30%;
-    height: 100%;
+    object-fit: contain;
 }
 
 .all-boats-links {
@@ -342,15 +343,48 @@ header {
 }
 
 .user-reviews-form {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 90%;
+    width: 75%;
+    height: 75vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
 }
 
 .form-group {
     width: 90%;
     height: 40%;
 }
+
+/*.user-reviews-form {
+    display: flex;
+    flex-direction: column;
+    background-color: mediumslateblue;
+    width: 90%;
+    height: 90%;
+}
+
+.form-group {
+    display: grid;
+    margin-top: 10%;
+    width: 50%;
+    height: 10%;
+}
+
+.control-label {
+    display: grid;
+}
+
+label {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}*/
+
 
 

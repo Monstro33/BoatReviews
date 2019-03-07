@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BoatReviews.Repositories
 {
-    public class CategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         BoatContext db;
 
