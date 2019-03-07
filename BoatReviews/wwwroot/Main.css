@@ -357,4 +357,32 @@ header {
     height: 40%;
 }
 
+/*.user-reviews-form {
+    display: flex;
+    flex-direction: column;
+    background-color: mediumslateblue;
+    width: 90%;
+    height: 90%;
+}
+
+.form-group {
+    display: grid;
+    margin-top: 10%;
+    width: 50%;
+    height: 10%;
+}
+
+.control-label {
+    display: grid;
+}
+
+label {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}*/
+
+
 

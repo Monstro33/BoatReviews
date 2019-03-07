@@ -10,7 +10,7 @@ namespace BoatReviews.Controllers
 {
     public class BoatController : Controller
     {
-        private IBoatRepository repo;
+        IBoatRepository repo;
 
         public BoatController(IBoatRepository repo)
         {
@@ -34,6 +34,7 @@ namespace BoatReviews.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Create(Boat boat)
         {
@@ -41,12 +42,14 @@ namespace BoatReviews.Controllers
             return RedirectToAction("Index");
 
         }
+
         [HttpGet]
         public ViewResult Delete(int id)
         {
             var model = repo.GetById(id);
             return View(model);
         }
+
         [HttpPost]
         public ActionResult Delete(Boat boat)
         {
@@ -54,12 +57,14 @@ namespace BoatReviews.Controllers
             return RedirectToAction("Index");
 
         }
+
         [HttpGet]
         public ViewResult Edit(int id)
         {
             var model = repo.GetById(id);
             return View(model);
         }
+
         [HttpPost]
         public ActionResult Edit(Boat boat)
         {
