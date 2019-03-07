@@ -54,12 +54,32 @@
                     <img src="@url" />
                 </div>
                 <div class="boat-info">
-                    <h1>@Model.Name</h1>
-                    <p>@Model.ReviewContent</p>
-                    <a href="/Boat/Edit/@Model.Id">Edit This Boat Review</a>
-                    <a href="/Boat/Delete/@Model.Id">Delete This Boat Review</a>
-                    <a href="/Boat">Back to list</a>
+                    <div class="boat-info2">
+                        <h3>@Model.Name</h3>
+                        <h5><p>@Model.ReviewContent</p></h5>
+                        <a href="/Boat/Edit/@Model.Id">Edit This Boat Review</a>
+                        <a href="/Boat/Delete/@Model.Id">Delete This Boat Review</a>
+                        <a href="/Boat">Back to list</a>
+                    </div>
                 </div>
+
+            @*</div>
+            <div class="category-name">
+                <h1>@Model.CategoryName</h1>
+            </div>
+            </nav>
+            </header>
+            <div class="category-info">
+                <div class="category-info2">
+                    <div class="category-preview">
+                        <img src="~/@Model.CategoryImageLocation" />
+                    </div>
+                    <div class="category-details">
+                        <h3>@Model.CategoryContent</h3>
+                        <p><a href="/category">Back to list</a></p>
+                    </div>
+                </div>*@
+
             </div>
             <script type="text/javascript">
                 //Menu toggle-effect
