@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BoatReviews.Migrations
 {
     [DbContext(typeof(BoatContext))]
-    [Migration("20190307162457_ChangedSeedDataBack")]
-    partial class ChangedSeedDataBack
+    [Migration("20190307183439_NewInitialCreate")]
+    partial class NewInitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

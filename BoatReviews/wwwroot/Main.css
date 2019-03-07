@@ -365,6 +365,12 @@ header {
     height: 40%;
 }
 
+.all-boats2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px);
+    grid-gap: 10px;
+}
+
 /*.user-reviews-form {
     display: flex;
     flex-direction: column;
