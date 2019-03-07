@@ -55,5 +55,11 @@ namespace BoatReviews.Tests
             var model = (Boat)result.Model;
             Assert.Equal(expectedModel, model);
         }
+
+        [Fact]
+        public void Boat_Is_Added()
+        {
+
+        }
     }
 }
