@@ -106,32 +106,37 @@ header {
 
 .row {
     margin: 0 auto;
-    width: 50%;
+    width: 100%;
     height: 50vh;
     text-align: center;
-    
 }
 
 .column {
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 40%;
     margin: 5px;
+    margin-top: 25vh;
     padding: 5px;
-    border: 3px solid white;
-    border-radius: 30px 30px;
-    box-shadow: 5px 10px #888888;
-    display: block;
+    /*border: 3px solid white;
+    border-radius: 15px 15px;
+    box-shadow: 5px 10px #888888;*/
+    display: inline-block;
 }
 
 .column a {
-        border: solid;
+        /*border: solid;
         border-color: white;
         border: 3px solid white;
         border-radius: 30px 30px;
-        box-shadow: 5px 10px #888888;
+        box-shadow: 5px 10px #888888;*/
         width: 35%;
         height: 30%;
         align-content: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: white;
     }
 
     .category-name {
@@ -324,17 +329,20 @@ header {
 }
 
 .all-boats-list {
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 400px);
-    /*width: 100%;
+    object-fit: contain;
+    width: 100%;
     height: 80%;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
     display: inline-block;
     padding: 3px;*/
 }
-.all-boats-list img {
-    object-fit: contain;
-}
+    .all-boats-list img {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 400px);
+        object-fit: contain;
+    }
 
 .all-boats-links {
     width: 100%;
