@@ -324,12 +324,12 @@ header {
 }
 
 .all-boats-list {
-    width: 100%;
+    /*width: 100%;
     height: 80%;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
     display: inline-block;
-    padding: 3px;
-    }
+    padding: 3px;*/
+}
 .all-boats-list img {
     object-fit: contain;
 }
