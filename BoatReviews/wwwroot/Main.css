@@ -308,7 +308,7 @@ nav ul li a {
     .all-boats:before {
         content: ' ';
         display: block;
-        padding-bottom: 140%;
+        /*padding-bottom: 140%;*/
     }
 
 .all-boats2 {
@@ -329,18 +329,25 @@ nav ul li a {
 
 #boatGallery {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 12vw);
+    grid-gap: 2rem;
+    width: 100%;
+    height: 75%;
 }
 
-.grid-item, img{
-
-    width: 100px;
-    height: 100px;
+.container h5 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
-.all-boats-list {
+.grid-item, img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*.all-boats-list {
     /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
     grid-gap: 2px;*/
@@ -348,26 +355,26 @@ nav ul li a {
     height: 80%;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);*/
     /*display: inline-block;*/
-    /*padding: 3px;*/
+    /*padding: 3px;
 
     display: flex;
     flex-wrap: wrap;
 
-}
+}*/
 
-    .all-boats-list img {
+    /*.all-boats-list img {
         width: 120px;
         height: 120px;
         object-fit: contain;
         border: 5px solid black;
-    }
+    }*/
 
-    .all-boats-list a {
+    /*.all-boats-list a {
         margin-left: -10rem;
         color: #FFF;
         text-decoration: none;
         font-weight: normal;
-    }
+    }*/
 
 /*.all-boats-links {
     width: 100%;
