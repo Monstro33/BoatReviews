@@ -327,6 +327,11 @@ nav ul li a {
     position: absolute;
 }
 
+.boat-info2 a {
+    color: lightblue;
+    padding: 0px 10px;
+}
+
 #boatGallery {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -339,8 +344,12 @@ nav ul li a {
 .container h4 {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    color: white;
 }
 
+.container h4 a {
+    color: white;
+}
 
 .grid-item, img {
     width: 100%;

@@ -30,7 +30,7 @@
                 <div class="menu">
                     <ul>
                         <li><a href="/category">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        @*<li><a href="#">About</a></li>*@
                         <li><a href="/boat">All Boats</a></li>
                         <li><a href="/boat/create">Review a Boat</a></li>
                         <li><a href="#">Contact</a></li>
@@ -54,8 +54,8 @@
                 </div>
                 <div class="boat-info">
                     <div class="boat-info2">
-                        <h3>@Model.Name</h3>
-                        <h5><p>@Model.ReviewContent</p></h5>
+                        <h2>@Model.Name</h2>
+                        <h4><p>@Model.ReviewContent</p></h4>
                         <a href="/Boat/Edit/@Model.Id">Edit This Boat Review</a>
                         <a href="/Boat/Delete/@Model.Id">Delete This Boat Review</a>
                         <a href="/Boat">Back to list</a>
