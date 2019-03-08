@@ -33,21 +33,21 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="header-2">
-                    <h4>Are you thinking about buying a boat? We've got lots of great reviews of new boats to help you make the right choice.</h4>
-                </div>
             </nav>
         </header>
+        <div class="header-2">
+            <h3>Are you thinking about buying a boat? We've got lots of great reviews of new boats to help you make the right choice.</h3>
+        </div>
         <div class="row">
-                @foreach (var category in Model)
-                {
-                    <div class="column">                     
-                        <a href="/Category/Details/@category.Id"><h3>@category.CategoryName</h3></a>
-                        @*@category.CategoryContent*@
-                    </div>
-                }
-            </div>
-       
+            @foreach (var category in Model)
+            {
+                <div class="column">
+                    <a href="/Category/Details/@category.Id"><h3>@category.CategoryName</h3></a>
+                    @*category.CategoryContent*@
+                </div>
+            }
+        </div>
+
         <script type="text/javascript">
 
             //Menu toggle-effect

@@ -40,16 +40,19 @@
             </div>
         </header>        
         <div class="all-boats">
-            <div class="all-boats2"> 
-                <div class="all-boats-list">
-                    @foreach (var boat in Model)
-                    {
+            <div class="all-boats2">
+                @{ int i = 0;}
+                @foreach (var boat in Model)
+                {
+                    <section class="grid-item grid-item @i">
+                        <h4><a href="/Boat/Details/@boat.Id">@boat.Name</a></h4>
                         <img src="@boat.ImageLocation" />
-                        <h5><a href="/Boat/Details/@boat.Id">@boat.Name</a></h5>
-                    }
-                </div>
-              
-                    <p><a href="/Boat">Back to list</a></p>
+                    </section>
+                    i++;
+                    @*<img src="@boat.ImageLocation" />
+            <h4><a href="/Boat/Details/@boat.Id">@boat.Name</a></h4>*@
+                }
+                <p><a href="/Boat">Back to list</a></p>
             </div>
 
             <script type="text/javascript">

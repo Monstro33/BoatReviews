@@ -22,42 +22,60 @@
     <script type="text/javascript"></script>
 </head>
 <body>
-
-    <h4>Boat</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
+    <div class="wrapper-2">
+        <header>
+            <nav>
+                <div class="logo">Boat Reviews</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/category">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/boat">All Boats</a></li>
+                        @*<li><a href="/category">Boat Categories</a></li>*@
+                        <li><a href="/boat/create">Review a Boat</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="user-reviews-form">
+            <h2>Create And Submit A Review</h2>
             <form asp-action="Edit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
+                <div class="form-group-large-house">
+                    <label asp-for="CategoryId" class="control-label"></label>
+                    <div class="form-group-large">
+
+                        <input type="radio" name="categoryId" value="1" id="box_1" />
+                        <label for="box_1">Motorboat</label>
+                        <input type="radio" name="categoryId" value="2" id="box_2" />
+                        <label for="box_2">Sailboat</label>
+                        <input type="radio" name="categoryId" value="3" id="box_3">
+                        <label for="box_3">Human Powered Boat</label>
+                        @*<select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>*@
+                    </div>
                 </div>
-                <input type="hidden" asp-for="Id" />
                 <div class="form-group">
                     <label asp-for="ImageLocation" class="control-label"></label>
                     <input asp-for="ImageLocation" class="form-control" />
                     <span asp-validation-for="ImageLocation" class="text-danger"></span>
                 </div>
                 <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group-textarea">
                     <label asp-for="ReviewContent" class="control-label"></label>
-                    <input asp-for="ReviewContent" class="form-control" />
+                    <input asp-for="ReviewContent" class="form-control" style="height:200px">
+
                     <span asp-validation-for="ReviewContent" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="CategoryId" class="control-label"></label>
-                    @*<select asp-for="CategoryId" class="form-control"></select>*@
-                    @*<input asp-for="CategoryId" class="form-control" />*@
-                    @*@if(@Catery)*@
-                    <input asp-for="CategoryId" type="radio" name="categoryId" value="1"> Motorboat<br>
-                    <input asp-for="CategoryId" type="radio" name="categoryId" value="2"> Sailboat<br>
-                    <input asp-for="CategoryId" type="radio" name="categoryId" value="3"> Human Powered Boat<br>
-                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                <div class="form-group-tiny">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                    <a asp-action="Index">Back to List</a>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-default" />
-                </div>
+                @*<a asp-action="Index">Back to List</a>*@
             </form>
         </div>
     </div>
@@ -68,3 +86,51 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<h4>Boat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ImageLocation" class="control-label"></label>
+                <input asp-for="ImageLocation" class="form-control" />
+                <span asp-validation-for="ImageLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReviewContent" class="control-label"></label>
+                <input asp-for="ReviewContent" class="form-control" />
+                <span asp-validation-for="ReviewContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                @*<select asp-for="CategoryId" class="form-control"></select>*@
+                @*<input asp-for="CategoryId" class="form-control" />*@
+                @*@if(@Catery)*@
+                <input asp-for="CategoryId" type="radio" name="categoryId" value="1"> Motorboat<br>
+                <input asp-for="CategoryId" type="radio" name="categoryId" value="2"> Sailboat<br>
+                <input asp-for="CategoryId" type="radio" name="categoryId" value="3"> Human Powered Boat<br>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+
