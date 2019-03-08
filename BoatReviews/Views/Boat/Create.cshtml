@@ -24,13 +24,26 @@
     <body>
         <div class="wrapper-2">
 
-            <h4>Boat</h4>
-            <hr />
+            <header>
+                <nav>
+                    <div class="logo">Boat Reviews</div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="/category">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="/boat">All Boats</a></li>
+                            <li><a href="/boat/create">Review a Boat</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            @*<hr />*@
 
             <div class="user-reviews-form">
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
+                    <div class="form-group-radio">
                         <label asp-for="CategoryId" class="control-label"></label>
                         <input type="radio" name="categoryId" value="1"> Motorboat<br>
                         <input type="radio" name="categoryId" value="2"> Sailboat<br>
