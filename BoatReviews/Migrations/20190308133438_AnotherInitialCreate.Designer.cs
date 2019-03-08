@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BoatReviews.Migrations
 {
     [DbContext(typeof(BoatContext))]
-    [Migration("20190308035657_ReInitKyleSaidTo")]
-    partial class ReInitKyleSaidTo
+    [Migration("20190308133438_AnotherInitialCreate")]
+    partial class AnotherInitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

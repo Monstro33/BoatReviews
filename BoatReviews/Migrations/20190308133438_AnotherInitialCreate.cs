@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BoatReviews.Migrations
 {
-    public partial class ReInitKyleSaidTo : Migration
+    public partial class AnotherInitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
