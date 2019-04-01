@@ -17,7 +17,7 @@ namespace BoatReviews.Models
         public string ReviewContent { get; set; }
         public virtual Category Category { get; set; }
         [Display(Name = "Boat Category")]
-        public int CategoryId { get; set; }
+        public int CategoryId { get; set; } 
         public Boat()
         {
 
