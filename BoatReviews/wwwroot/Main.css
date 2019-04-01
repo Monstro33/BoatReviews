@@ -163,12 +163,6 @@ nav ul li a {
 
 }
 
-/*.category-name {
-    text-align: center;
-    color: black;
-    height: 10vh;
-}*/
-
 .category-info {
     /*display: flex;
     flex-direction: column;*/
@@ -292,8 +286,8 @@ nav ul li a {
     }
 
 .boat-info {
-    width: 55%;
-    height: 90%;
+    width: 45%;
+    height: 100%;
     text-align: left;
     color: white;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);
@@ -343,7 +337,7 @@ nav ul li a {
     .all-boats:before {
         content: ' ';
         display: block;
-        padding-bottom: 140%;
+        /*padding-bottom: 140%;*/
     }
 
 .all-boats2 {
@@ -355,11 +349,54 @@ nav ul li a {
     background: black;
     /*padding: 2px;*/
     box-sizing: border-box;
-    /*position: absolute;*/
+    position: absolute;
+}
+
+.boat-info2 a {
+    color: lightblue;
+    padding: 0px 10px;
+}
+
+#boatGallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 8vw);
+    grid-gap: 2rem;
+    width: 100%;
+    height: 90%;
+}
+
+.container h4 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    color: white;
+}
+
+.container h4 a {
+    color: white;
+}
+
+.grid-item, img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/*.all-boats-list {
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    grid-gap: 2px;*/
+    /*width: 100%;
+    height: 80%;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,.2);*/
+    /*display: inline-block;*/
+    /*padding: 3px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 
 .all-boats-card {
     flex: 1 0 24rem;
@@ -387,27 +424,157 @@ nav ul li a {
         text-align: center;
     }
 
-.all-boats-links {
-    width: 100%;
-    height: 10%;
+.form-group-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*appearance: none;*/
     display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
 }
+
+    .form-group-radio:checked::before {
+        position: absolute;
+        font: 13px/1 'Open Sans', sans-serif;
+        left: 11px;
+        top: 7px;
+        content: '\02143';
+        transform: rotate(40deg);
+    }
+
+    .form-group-radio:hover {
+        background-color: #f7f7f7;
+    }
+
+    .form-group-radio:checked {
+        background-color: #f1f1f1;
+    }
+
+/*.form-group-radio {
+    display: block;
+    position: relative;
+    padding-left: 200px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default radio button */
+    /*.form-group-radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }*/
+
+/* Create a custom radio button */
+/*.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}*/
+
+/* On mouse-over, add a grey background color */
+/*.form-group-radio:hover input ~ .checkmark {
+    background-color: deepskyblue;
+}*/
+
+/* When the radio button is checked, add a blue background */
+/*.form-group-radio input:checked ~ .checkmark {
+    background-color: #ff0000;
+}*/
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+/*.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}*/
+
+/* Show the indicator (dot/circle) when checked */
+/*.form-group-radio input:checked ~ .checkmark:after {
+    display: block;
+}*/
+
+/* Style the indicator (dot/circle) */
+/*.form-group-radio .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}*/
 
 .user-reviews-form {
-    width: 90%;
-    height: 80vh;
-    margin: auto;
-    background-color: black;
-    opacity: 0.9;
-    padding: 15px;
+
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
     
+    background-color: black;
+    /*width: 75%;
+    height: 75vh;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.2;*/
+}
+input[type=radio]{
+
+}
+input[type=text]:focus {
+    background-color: lightblue;
+}
+input[type=text], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-label.control-label {
-    background-color: blue;
-    /*margin-left: 50px;
-    margin-right: 50px;*/
-    float: left;
+input[type=submit] {
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form-group {
+    width: 90%;
+    height: 40%;
+    text-align: right;
 }
 
 .form-group-large-house {

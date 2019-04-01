@@ -27,7 +27,7 @@
                 <div class="menu">
                     <ul>
                         <li><a href="/category">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        @*<li><a href="#">About</a></li>*@
                         <li><a href="/boat">All Boats</a></li>
                         @*<li><a href="/category">Boat Categories</a></li>*@
                         <li><a href="/boat/create">Review a Boat</a></li>
@@ -41,40 +41,45 @@
         </header>        
         <div class="all-boats">
             <div class="all-boats2">
-                @{ int i = 0;}
-                @foreach (var boat in Model)
-                {
-                    <section class="grid-item grid-item @i">
-                        <h4><a href="/Boat/Details/@boat.Id">@boat.Name</a></h4>
-                        <img src="@boat.ImageLocation" />
-                    </section>
-                    i++;
-                    @*<img src="@boat.ImageLocation" />
-            <h4><a href="/Boat/Details/@boat.Id">@boat.Name</a></h4>*@
-                }
+
+                <div class="container" id="boatGallery">
+                    @{ int i = 0;}
+                    @foreach (var boat in Model)
+                    {
+                        <section class="grid-item grid-item @i">
+                            <h4><a href="/Boat/Details/@boat.Id">@boat.Name</a></h4>
+                            <img src="@boat.ImageLocation" />
+
+                        </section>
+                        i++;
+                        @*<img src="@boat.ImageLocation" />
+                    <h4><a href="/Boat/Details/@boat.Id">@boat.Name</a></h4>*@
+                    }
+                </div>
+
                 <p><a href="/Boat">Back to list</a></p>
             </div>
 
-            <script type="text/javascript">
+            @*<script type="text/javascript">
                 //Menu toggle-effect
                 $(document).ready(function () {
-                $(".menu-icon").on("click", function () {
-                $("nav ul").toggleClass("showing");
-                });
+                    $(".menu-icon").on("click", function () {
+                        $("nav ul").toggleClass("showing");
+                    });
                 });
 
                 //Scrolling Effect
                 $(window).on('scroll', function () {
-                if ($(window).scrollTop()) {
-                $('nav').addClass('black');
-                }
-                else {
-                $('nav').removeClass('black')
-                }
+                    if ($(window).scrollTop()) {
+                        $('nav').addClass('black');
+                    }
+                    else {
+                        $('nav').removeClass('black')
+                    }
                 })
             </script>
+        </div>*@
         </div>
-    </div>
 </body>
 </html>
 
