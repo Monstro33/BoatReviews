@@ -29,9 +29,7 @@
                 <div class="menu">
                     <ul>
                         <li><a href="/category">Home</a></li>
-                        <li><a href="#">About</a></li>
                         <li><a href="/boat">All Boats</a></li>
-                        @*<li><a href="/category">Boat Categories</a></li>*@
                         <li><a href="/boat/create">Review a Boat</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -45,24 +43,10 @@
                 <div class="form-group-large-house">
                     <label asp-for="CategoryId" class="control-label"></label>
                     <div class="form-group-large">
-
-            <header>
-                <nav>
-                    <div class="logo">Boat Reviews</div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="/category">Home</a></li>
-                            @*<li><a href="#">About</a></li>*@
-                            <li><a href="/boat">All Boats</a></li>
-                            <li><a href="/boat/create">Review a Boat</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
                     </div>
-                </nav>
-            </header>
-            @*<hr />*@
-
-            <div class="user-reviews-form">
+                </div>
+            </form>
+                <div class="user-reviews-form">
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group-radio">
@@ -70,8 +54,6 @@
                         <input type="radio" name="categoryId" value="1"> Motorboat<br>
                         <input type="radio" name="categoryId" value="2"> Sailboat<br>
                         <input type="radio" name="categoryId" value="3"> Human Powered Boat<br>
-
-                        @*<select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>*@
                     </div>
                 </div>
                 <div class="form-group">
@@ -94,32 +76,27 @@
                     <input type="submit" value="Create" class="btn btn-default" />
                     <a asp-action="Index">Back to List</a>
                 </div>
-                @*<a asp-action="Index">Back to List</a>*@
-            </form>
-
-            <script type="text/javascript">
-                //Menu toggle-effect
-                $(document).ready(function () {
-                    $(".menu-icon").on("click", function () {
-                        $("nav ul").toggleClass("showing");
+                </form>
+                </div>
+                <script type="text/javascript">
+                    //Menu toggle-effect
+                    $(document).ready(function () {
+                        $(".menu-icon").on("click", function () {
+                            $("nav ul").toggleClass("showing");
+                        });
                     });
-                });
 
-                //Scrolling Effect
-                $(window).on('scroll', function () {
-                    if ($(window).scrollTop()) {
-                        $('nav').addClass('black');
-                    }
-                    else {
-                        $('nav').removeClass('black')
-                    }
-                })
-            </script>
-
-        </div>
-        <div>
-        </div>
-    </div>
-</body>
+                    //Scrolling Effect
+                    $(window).on('scroll', function () {
+                        if ($(window).scrollTop()) {
+                            $('nav').addClass('black');
+                        }
+                        else {
+                            $('nav').removeClass('black')
+                        }
+                    })
+                </script>
+            </div>
+    </body>
 
 </html>

@@ -27,9 +27,7 @@
                 <div class="menu">
                     <ul>
                         <li><a href="/category">Home</a></li>
-                        @*<li><a href="#">About</a></li>*@
                         <li><a href="/boat">All Boats</a></li>
-                        @*<li><a href="/category">Boat Categories</a></li>*@
                         <li><a href="/boat/create">Review a Boat</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -52,33 +50,11 @@
 
                         </section>
                         i++;
-                        @*<img src="@boat.ImageLocation" />
-                    <h4><a href="/Boat/Details/@boat.Id">@boat.Name</a></h4>*@
                     }
                 </div>
 
                 <p><a href="/Boat">Back to list</a></p>
             </div>
-
-            @*<script type="text/javascript">
-                //Menu toggle-effect
-                $(document).ready(function () {
-                    $(".menu-icon").on("click", function () {
-                        $("nav ul").toggleClass("showing");
-                    });
-                });
-
-                //Scrolling Effect
-                $(window).on('scroll', function () {
-                    if ($(window).scrollTop()) {
-                        $('nav').addClass('black');
-                    }
-                    else {
-                        $('nav').removeClass('black')
-                    }
-                })
-            </script>
-        </div>*@
         </div>
 </body>
 </html>

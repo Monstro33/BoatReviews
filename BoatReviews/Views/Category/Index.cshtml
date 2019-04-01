@@ -26,9 +26,7 @@
                 <div class="menu">
                     <ul>
                         <li><a href="/category">Home</a></li>
-                        @*<li><a href="#">About</a></li>*@
                         <li><a href="/boat">All Boats</a></li>
-                        @*<li><a href="/category">Boat Categories</a></li>*@
                         <li><a href="/boat/create">Review a Boat</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -40,15 +38,11 @@
 
             </nav>
         </header>
-        <div class="header-2">
-            <h3>Are you thinking about buying a boat? We've got lots of great reviews of new boats to help you make the right choice.</h3>
-        </div>
         <div class="row">
             @foreach (var category in Model)
             {
                 <div class="column">
                     <a href="/Category/Details/@category.Id"><h3>@category.CategoryName</h3></a>
-                    @*category.CategoryContent*@
                 </div>
             }
         </div>

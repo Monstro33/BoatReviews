@@ -27,9 +27,7 @@
                 <div class="menu">
                     <ul>
                         <li><a href="/category">Home</a></li>
-                        @*<li><a href="#">About</a></li>*@
                         <li><a href="/boat">All Boats</a></li>
-                        @*<li><a href="/category">Boat Categories</a></li>*@
                         <li><a href="/boat/create">Review a Boat</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -39,24 +37,16 @@
         <div class="category-main">
             
             <div class="category-info">
-                @*<div class="category-header">
+                 <div class="category-info2">
                     <h2>@Model.CategoryName</h2>
                     <h3>@Model.CategoryContent</h3>
-                </div>*@
-                <div class="category-info2">
-                    <h2>@Model.CategoryName</h2>
-                    <h3>@Model.CategoryContent</h3>
-                    @foreach (var boat in Model)
+                    @foreach (var boat in Model.Boats)
                     {
                         <img src="@boat.ImageLocation" />
                         <h5><a href="/Boat/Details/@boat.Id">@boat.Name</a></h5>
                     }
                     <p><a href="/category">Back to list</a></p>
                 </div>
-                @*@foreach (var boat in Model.Boats)
-                {
-                    <h1>@boat.Name</h1>
-                }*@
             </div>
         </div>
 
