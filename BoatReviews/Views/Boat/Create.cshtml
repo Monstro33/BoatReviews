@@ -24,79 +24,129 @@
 <body>
     <div class="wrapper-2">
         <header>
-            <nav>
-                <div class="logo">Boat Reviews</div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="/category">Home</a></li>
-                        <li><a href="/boat">All Boats</a></li>
-                        <li><a href="/boat/create">Review a Boat</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+            <div class="logo">
+                <img src="~/Img/logo.png" />
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="/album">Home</a></li>
+                    <li><a href="/song">All Songs</a></li>
+                    <li><a href="/song/create">Add A Song</a></li>
+                </ul>
+            </div>
         </header>
+        @*<hr />*@
+
         <div class="user-reviews-form">
-            <h2>Create And Submit A Review</h2>
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group-large-house">
-                    <label asp-for="CategoryId" class="control-label"></label>
-                    <div class="form-group-large">
-                    </div>
-                </div>
+
+                @*<h4><label asp-for="AlbumId"></label></h4>*@
+                <input type="radio" name="AlbumId" id="radio-1" value="1"><label for="radio-1">Old School</label>
+                <input type="radio" name="AlbumId" id="radio-2" value="2"><label for="radio-2">Relax</label>
+                <input type="radio" name="AlbumId" id="radio-3" value="3"><label for="radio-3">Waves</label>
+
+
+                <input asp-for="Name" placeholder="Song Name?" class="name" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+
+                <input asp-for="ImageLocation" placeholder="Song Image URL?" class="image-url" required />
+                <span asp-validation-for="ImageLocation" class="text-danger"></span>
+
+
+                @*<input asp-for="SongInfo" placeholder="Song Description?" class="message" required />
+                <span asp-validation-for="SongInfo" class="text-danger"></span>*@
+
+
+                <input asp-for="ReviewContent" placeholder="Add A Review..." class="message" required />
+                <span asp-validation-for="ReviewContent" class="text-danger"></span>
+
+                <input type="submit" value="Create" class="btn btn-default" />
+                <button class="btn btn-default"><a href="/song">Back to list</a></button>
             </form>
-                <div class="user-reviews-form">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+@*<div class="wrapper-2">
+            <header>
+                <nav>
+                    <div class="logo">Boat Reviews</div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="/category">Home</a></li>
+                            <li><a href="/boat">All Boats</a></li>
+                            <li><a href="/boat/create">Review a Boat</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="user-reviews-form">
+                <h2>Create And Submit A Review</h2>
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group-radio">
+                    <div class="form-group-large-house">
                         <label asp-for="CategoryId" class="control-label"></label>
-                        <input type="radio" name="categoryId" value="1"> Motorboat<br>
-                        <input type="radio" name="categoryId" value="2"> Sailboat<br>
-                        <input type="radio" name="categoryId" value="3"> Human Powered Boat<br>
+                        <div class="form-group-large">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ImageLocation" class="control-label"></label>
-                    <input asp-for="ImageLocation" class="form-control" />
-                    <span asp-validation-for="ImageLocation" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="form-group-textarea">
-                    <label asp-for="ReviewContent" class="control-label"></label>
-                    <input asp-for="ReviewContent" class="form-control" style="height:200px">
-
-                    <span asp-validation-for="ReviewContent" class="text-danger"></span>
-                </div>
-                <div class="form-group-tiny">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                    <a asp-action="Index">Back to List</a>
-                </div>
                 </form>
-                </div>
-                <script type="text/javascript">
-                    //Menu toggle-effect
-                    $(document).ready(function () {
-                        $(".menu-icon").on("click", function () {
-                            $("nav ul").toggleClass("showing");
+                    <div class="user-reviews-form">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group-radio">
+                            <label asp-for="CategoryId" class="control-label"></label>
+                            <input type="radio" name="categoryId" value="1"> Motorboat<br>
+                            <input type="radio" name="categoryId" value="2"> Sailboat<br>
+                            <input type="radio" name="categoryId" value="3"> Human Powered Boat<br>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ImageLocation" class="control-label"></label>
+                        <input asp-for="ImageLocation" class="form-control" />
+                        <span asp-validation-for="ImageLocation" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group-textarea">
+                        <label asp-for="ReviewContent" class="control-label"></label>
+                        <input asp-for="ReviewContent" class="form-control" style="height:200px">
+
+                        <span asp-validation-for="ReviewContent" class="text-danger"></span>
+                    </div>
+                    <div class="form-group-tiny">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                        <a asp-action="Index">Back to List</a>
+                    </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript">
+                        //Menu toggle-effect
+                        $(document).ready(function () {
+                            $(".menu-icon").on("click", function () {
+                                $("nav ul").toggleClass("showing");
+                            });
                         });
-                    });
 
-                    //Scrolling Effect
-                    $(window).on('scroll', function () {
-                        if ($(window).scrollTop()) {
-                            $('nav').addClass('black');
-                        }
-                        else {
-                            $('nav').removeClass('black')
-                        }
-                    })
-                </script>
-            </div>
-    </body>
+                        //Scrolling Effect
+                        $(window).on('scroll', function () {
+                            if ($(window).scrollTop()) {
+                                $('nav').addClass('black');
+                            }
+                            else {
+                                $('nav').removeClass('black')
+                            }
+                        })
+                    </script>
+                </div>
+        </body>
 
-</html>
+    </html>*@
